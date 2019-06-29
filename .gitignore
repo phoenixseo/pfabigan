@@ -2,14 +2,14 @@
 drush/contrib
 vendor
 bin
-docroot/core
-docroot/libraries
-docroot/modules/contrib
-docroot/themes/contrib
-docroot/profiles/contrib
+web/core
+web/libraries
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
 
 # Ignore Drupal's file directory
-docroot/sites/default/files
+web/sites/default/files
 private/*
 tmp/*
 
@@ -28,14 +28,14 @@ docroot/sites/*/settings.devdesktop.php
 docroot/sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
-docroot/sites/*/files
-docroot/sites/*/private
+web/sites/*/files
+web/sites/*/private
 
 # Ignore SimpleTest multi-site environment.
-docroot/sites/simpletest
+web/sites/simpletest
 
 # Ignore Acquia Dev Desktop configs.
-docroot/sites/*.dd
+web/sites/*.dd
 
 # Ignore .env files as they are personal
-/.env
+.env
