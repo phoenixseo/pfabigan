@@ -1,0 +1,7 @@
+entity.amp_metadata.add_form:
+  route_name: 'entity.amp_metadata.add_form'
+  title: 'Add AMP Metadata'
+  appears_on:
+    - entity.amp_metadata.collection
+  cache_tags:
+    - amp_available_metadata

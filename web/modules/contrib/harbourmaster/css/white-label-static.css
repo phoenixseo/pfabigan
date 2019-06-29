@@ -1,0 +1,94 @@
+/*
+ * Copyright © 2016 Valiton GmbH.
+ *
+ * This file is part of Harbourmaster Drupal Plugin.
+ *
+ * Harbourmaster Drupal Plugin is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Harbourmaster Drupal Plugin is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Harbourmaster Drupal Plugin.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+/*
+  defaults
+*/
+.hms-widget * {
+  font-family: inherit;
+  font-size: 14px;
+  color: #222;
+}
+
+
+/*
+  block headlines
+*/
+.hms-widget h2 {
+  background-color: #666;
+  border-radius: 4px;
+  // color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+/*
+  form field labels
+*/
+.hms-widget label {
+  margin-bottom: 5px;
+  max-width: 100%;
+}
+
+/*
+  form input fields
+*/
+.hms-widget .form-control,
+.hms-widget .selectbox span.value {
+  border-color: #c3c3c3;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e8e4e4;
+  border-radius: 4px;
+  color: #555555;
+  display: block;
+  font-size: inherit;
+  height: 39px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+}
+
+/*
+  form input fields, on focus
+*/
+.hms-widget .form-control:focus {
+  border-color: #000;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0, 0.6);
+}
+
+/*
+  primary button
+*/
+.hms-widget .btn-primary {
+  background-color: #288a07;
+  border-color: #1e6b04;
+}
+.hms-widget .btn-primary:hover,
+.hms-widget .btn-primary:active,
+.hms-widget .btn-primary:focus,
+.hms-widget .btn-primary:active:hover {
+  background-color: #1e6b04;
+  border-color: #1e6b04;
+}

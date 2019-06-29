@@ -1,0 +1,52 @@
+{# Add wrapper classes #}
+{% set wrapper_classes = [
+'teaser',
+'contextual-region',
+]
+%}
+
+{% set attributes = attributes.setAttribute('data-nid', nid) %}
+
+<article{{ attributes.addClass(wrapper_classes) }}>
+  <div class="img-container" itemscope="" itemtype="http://schema.org/imageObject" data-internal-url="{{ url }}">
+    {% block teaser_img_container %}
+      {% if (view_mode == 'presenter_half' and content.field_presenter_media['#items'] is not empty) %}
+        {{ content.field_presenter_media }}
+      {% else %}
+        {{ content.field_teaser_media }}
+      {% endif %}
+    {% endblock %}
+  </div>
+
+  <div class="caption caption-teaser">
+    {% block teaser_caption_channel %}
+      {{ content.field_channel }}
+    {% endblock %}
+
+    {% block sponsored %}
+        {% include '@infinite/node/twig-block-sponsored.html.twig' %}
+    {% endblock %}
+
+    {% block teaser_text_headline %}
+      <h2 class="text-headline">
+        <a href="{{ url }}" target="_self" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endblock %}
+
+    <header>
+      {% block teaser_author %}
+        {{ author_teaser }}
+      {% endblock %}
+      {% block teaser_content %}{% endblock %}
+      <div class="socials socials-bar">
+        {% block teaser_social_bar %}
+          {% embed '@infinite/embeds/social_icons.html.twig' with {'facebook_share_button': '', 'whatsapp_share_button': '', 'pinterest_share_button': '', 'twitter_share_button': '', 'email_share_button': ''}  %}
+          {% endembed %}
+        {% endblock %}
+      </div>
+    </header>
+  </div>
+  {% if (show_contextual_links) %}
+    {{ title_suffix.contextual_links }}
+  {% endif %}
+</article>

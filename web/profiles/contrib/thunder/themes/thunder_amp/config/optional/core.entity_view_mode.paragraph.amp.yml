@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+  enforced:
+    theme:
+      - thunder_amp
+id: paragraph.amp
+label: AMP
+targetEntityType: paragraph
+cache: true

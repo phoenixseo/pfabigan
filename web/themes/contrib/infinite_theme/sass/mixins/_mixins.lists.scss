@@ -1,0 +1,103 @@
+@mixin list__images--horizontal() {
+  @include clearfix();
+
+  @media (min-width: $screen-xxs-min) and (max-width: $screen-xs-max) {
+    margin-left: -$teaser-list-h-teaser-gap-mobile;
+    margin-right: -$teaser-list-h-teaser-gap-mobile;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-left: -$teaser-list-h-teaser-gap-tablet;
+    margin-right: -$teaser-list-h-teaser-gap-tablet;
+  }
+
+  @media (min-width: $screen-md-min) {
+    margin-left: -$teaser-list-h-teaser-gap-desktop;
+    margin-right: -$teaser-list-h-teaser-gap-desktop;
+  }
+}
+
+@mixin list__images--horizontal__item() {
+  @media (min-width: $screen-xxs-min) and (max-width: $screen-xs-max) {
+    padding-left: $teaser-list-h-teaser-gap-mobile;
+    padding-right: $teaser-list-h-teaser-gap-mobile;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    float: left;
+    width: percentage(($grid-columns / $teaser-list-horizontal-count-default) / $grid-columns);
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    padding-left: $teaser-list-h-teaser-gap-tablet;
+    padding-right: $teaser-list-h-teaser-gap-tablet;
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding-left: $teaser-list-h-teaser-gap-desktop;
+    padding-right: $teaser-list-h-teaser-gap-desktop;
+  }
+}
+
+@mixin list__links--module() {
+  margin-top: $gap-size-xs;
+  padding-bottom: $gap-size-md;
+
+  li {
+    margin-top: 5px;
+    border-bottom: $h-line-style;
+  }
+}
+
+@mixin list__alphabetical() {
+  h2, h3 {
+    padding: $list--alphabetical-headline-padding;
+    margin: $list--alphabetical-headline-margin;
+    border-top: $h-line-style;
+    border-bottom: $h-line-style;
+    color: $list--alphabetical-headline-color;
+  }
+
+  li {
+    margin: $list--alphabetical-list-item-margin;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@mixin list__glossary() {
+  @include clearfix();
+  @include list__glossary-text();
+  line-height: $list__glossary-line-height;
+  color: $list__glossary-disabled-color;
+
+  li {
+    margin: $list__glossary-margin;
+    float: left;
+    text-align: center;
+    background-color: $list__glossary-background-disabled-color;
+  }
+
+  a {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    color: $text-color;
+    background-color: $list__glossary-background-color;
+    padding: $list__glossary-padding;
+    border: $list__glossary-border;
+    line-height: $list__glossary-line-height - 2px;
+
+    &.active, &:hover {
+      background-color: $list__glossary-background-color-active;
+      color: $list__glossary-color-active;
+    }
+  }
+}
+
+@mixin list__item--teasers-square-xs() {
+  @include gap--v-sm();
+  border-top: $h-line-style;
+}

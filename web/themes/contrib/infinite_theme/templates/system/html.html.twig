@@ -1,0 +1,38 @@
+{% set body_classes = [
+logged_in ? 'user-logged-in',
+not root_path ? 'page-front' : 'page-' ~ root_path|clean_class,
+node_type ? 'page-' ~ node_type|clean_class,
+db_offline ? 'db-offline',
+] %}
+
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head-placeholder token="{{ placeholder_token|raw }}">
+        <title>{{ head_title|safe_join(' | ') }}</title>
+        <css-placeholder token="{{ placeholder_token|raw }}">
+        <js-placeholder token="{{ placeholder_token|raw }}">
+
+    </head>
+    <body class="{{ attributes.addClass(body_classes).class }}">
+        {% block api_gtm %}
+            {% if gtm_vars %}
+                {% embed '@infinite/embeds/api_gtm.html.twig' with gtm_vars %}{% endembed %}
+            {% endif %}
+        {% endblock %}
+        {% block api_fb %}
+            {% if fb_vars %}
+                {% embed '@infinite/embeds/api_fb.html.twig' with fb_vars %}{% endembed %}
+            {% endif %}
+        {% endblock %}
+        <div id="page-wrapper">
+            {{ page_top }}
+            {{ page }}
+            {{ page_bottom }}
+
+        </div>
+        <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+    </body>
+</html>

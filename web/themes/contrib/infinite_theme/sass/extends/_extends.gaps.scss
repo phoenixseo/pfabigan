@@ -1,0 +1,19 @@
+%clear-gutter-gap {
+  @include clear-gutter-gap();
+}
+
+%padding-gutter-gap {
+  @include padding-gutter-gap();
+}
+
+%gap--v-sm {
+  @include gap--v-sm();
+}
+
+%gap--v-xl {
+  @include gap--v-xl();
+}
+
+%gap--v-region {
+  @include gap--v-region();
+}

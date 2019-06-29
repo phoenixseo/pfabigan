@@ -1,0 +1,191 @@
+@mixin seo-linker-text() {
+  .seo-linker__item-title {
+    @include text-headline($seo-linker__item-title-size);
+  }
+
+  .seo-linker__link-list--image {
+    @include text-content-size($seo-linker__link-list-size);
+  }
+}
+
+/**
+** Teaser types
+**/
+
+@mixin teaser-feed-large-text() {
+  .text-headline {
+    @include text-headline-size($feed-teaser-headline-size-mobile);
+  }
+
+  @media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+    .text-headline {
+      @include text-headline-size($feed-teaser-headline-size-tablet);
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .text-headline {
+      @include text-headline-size($feed-teaser-headline-size-desktop);
+    }
+  }
+}
+
+@mixin teaser-list-h-text() {
+  .text-headline {
+    @include text-content();
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .text-headline {
+      @include text-content-size($teaser-list-h-headline-size-mobile);
+    }
+  }
+
+  @media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+    .text-headline {
+      @include text-content-size($teaser-list-h-headline-size-tablet);
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .text-headline {
+      @include text-content-size($teaser-list-h-headline-size-desktop);
+    }
+  }
+}
+
+@mixin teaser-landscape-medium-text() {
+  @include teaser-feed-large-text();
+}
+
+@mixin teaser-square-xs-text() {
+  .text-headline {
+    @include text-headline();
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .text-headline {
+      @include text-headline-size($teaser-square-xs-headline-size-mobile);
+    }
+  }
+
+  @media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+    .text-headline {
+      @include text-headline-size($teaser-square-xs-headline-size-tablet);
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .text-headline {
+      @include text-headline-size($teaser-square-xs-headline-size-desktop);
+    }
+  }
+}
+
+/**
+** Socials
+**/
+
+@mixin socials-labeled-horizontal-bar-text() {
+  .item-social span {
+    @include text-headline();
+    font-size: $socials-labeled-horizontal-bar-label-size;
+    line-height: $socials-labeled-horizontal-bar-label-size + 1px;
+  }
+}
+
+/**
+** Products
+**/
+
+//todo only text
+@mixin product__item-text() {
+  .text-headline {
+    @include text-headline($product__item-text-headline-size);
+    margin-top: 9px;
+    margin-bottom: 44px;
+    height: $product__item-text-headline-height;
+    overflow: hidden;
+  }
+
+  .text-brand {
+    @extend %text-label;
+    @extend %text-label-size-small;
+    color: $gray-base;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .text-shipping, .text-price {
+    @extend %text-headline;
+    @extend %text-label-size-small;
+    position: absolute;
+    bottom: 35px;
+  }
+
+  .text-price {
+    left: 0;
+  }
+
+  .text-shipping {
+    right: 0;
+    color: $gray-base;
+  }
+
+  .text-shop {
+    @extend %transition-default;
+    @extend %text-label;
+    @extend %text-label-size-small;
+    color: $color-highlighted;
+    border: 1px solid $color-highlighted;
+    border-radius: 10px;
+    padding: 4px 20px;
+    margin-top: $padding;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+}
+
+/**
+** Lists
+**/
+
+@mixin list__glossary-text() {
+  @include text-label($list__glossary-font-size);
+}
+
+@mixin item-content--spotlight-text() {
+  text-align: center;
+
+  .title {
+    letter-spacing: $spotlight__title-letter-spacing;
+    text-shadow: $spotlight__caption-text-shadow;
+
+    @media (max-width: $screen-xs-max) {
+      @include text-headline($spotlight__title-size-mobile);
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      @include text-headline($spotlight__title-size-tablet);
+    }
+
+    @media (min-width: $screen-md-min) {
+      @include text-headline();
+      @include text-headline-size($spotlight__title-size-desktop, 1.1);
+    }
+  }
+
+  .subtitle {
+    @include text-content($spotlight__subtitle-size);
+    text-transform: uppercase;
+    text-shadow: $spotlight__caption-text-shadow;
+  }
+
+  .copytext {
+    @include text-tiny($spotlight__copytext-size);
+    text-shadow: $spotlight__caption-text-shadow;
+  }
+}

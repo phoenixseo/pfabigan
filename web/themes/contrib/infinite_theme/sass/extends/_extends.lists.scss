@@ -1,0 +1,23 @@
+%list__images--horizontal {
+  @include list__images--horizontal();
+}
+
+%list__images--horizontal__item {
+  @include list__images--horizontal__item();
+}
+
+%list__item--teasers-square-xs {
+  @include list__item--teasers-square-xs();
+}
+
+%list__links--module {
+  @include list__links--module();
+}
+
+%list__glossary {
+  @include list__glossary();
+}
+
+%list__alphabetical {
+  @include list__alphabetical();
+}

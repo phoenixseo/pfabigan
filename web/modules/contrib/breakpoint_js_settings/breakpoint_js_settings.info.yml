@@ -1,0 +1,14 @@
+name: Breakpoint Javascript Settings
+type: module
+description: Write breakpoint informtion into javascript settings.
+package: Helper
+# core: 8.x
+# version: 8.x-1.x-dev
+dependencies:
+  - breakpoint
+
+# Information added by Drupal.org packaging script on 2016-04-15
+version: '8.x-1.0-rc1'
+core: '8.x'
+project: 'breakpoint_js_settings'
+datestamp: 1460703546

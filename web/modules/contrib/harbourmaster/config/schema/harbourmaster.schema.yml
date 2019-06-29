@@ -1,0 +1,34 @@
+harbourmaster.settings:
+  type: config_object
+  label: Harbourmaster Configuration
+  mapping:
+    sso_cookie_domain:
+      type: string
+      label: SSO cookie domain
+    sso_cookie_name:
+      type: string
+      label: SSO cookie name
+    sso_cookie_lifetime:
+      type: integer
+      label: SSO cookie lifetime
+    harbourmaster_lookup_ttl:
+      type: integer
+      label: HMS lookup TTL
+    harbourmaster_api_url:
+      type: uri
+      label: HMS URL
+    harbourmaster_api_tenant:
+      type: string
+      label: HMS Tenant
+    harbourmaster_api_version:
+      type: string
+      label: API Version
+    user_manager_url:
+      type: uri
+      label: User manager URL
+    cross_domain_login_path:
+      type: string
+      label: Cross domain authentication login path
+    cross_domain_logout_path:
+      type: string
+      label: Cross domain authentication logout path

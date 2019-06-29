@@ -1,0 +1,114 @@
+<?php
+
+/**
+ * @file
+ * Copyright © 2016 Valiton GmbH.
+ *
+ * This file is part of Harbourmaster Drupal Plugin.
+ *
+ * Harbourmaster Drupal Plugin is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * Harbourmaster Drupal Plugin is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with Harbourmaster Drupal Plugin.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
+ * Implements hook_library_info_build().
+ *
+ * @return array
+ */
+function harbourmaster_library_info_build() {
+  $url = \Drupal::config('harbourmaster.settings')->get('user_manager_url');
+  $libraries = [];
+  $libraries['usermanager.app'] = [
+    'dependencies' => [
+      'core/jquery',
+    ],
+    'js' => [
+      $url . '/usermanager/prod/js/libs.js' => [
+        'type' => 'external',
+      ],
+      $url . '/usermanager/prod/js/app.js' => [
+        'type' => 'external',
+      ],
+    ],
+    'css' => [
+      'component' => [
+        $url . '/styles/hms-widget.css' => [
+          'type' => 'external',
+        ],
+      ],
+    ],
+  ];
+  return $libraries;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * @return array
+ */
+function harbourmaster_theme() {
+
+  $theme['usermanager'] = [
+    'variables' => [],
+    'template' => 'usermanager',
+  ];
+
+  $theme['usermanager.confirmation'] = [
+    'variables' => [],
+    'template' => 'usermanager.confirmation',
+  ];
+
+  $theme['usermanager.password'] = [
+    'variables' => [],
+    'template' => 'usermanager.password',
+  ];
+
+  $theme['usermanager.profile'] = [
+    'variables' => [],
+    'template' => 'usermanager.profile',
+  ];
+
+  $theme['usermanager.reset_password'] = [
+    'variables' => [],
+    'template' => 'usermanager.reset_password',
+  ];
+
+  $theme['usermanager.signin'] = [
+    'variables' => [],
+    'template' => 'usermanager.signin',
+  ];
+
+  $theme['usermanager.signout'] = [
+    'variables' => [],
+    'template' => 'usermanager.signout',
+  ];
+
+  $theme['usermanager.login_page'] = [
+    'variables' => [],
+    'template' => 'usermanager.login_page',
+  ];
+
+  $theme['usermanager.profile_page'] = [
+    'variables' => [],
+    'template' => 'usermanager.profile_page',
+  ];
+
+  $theme['status'] = [
+    'variables' => [
+      'currentUser' => NULL,
+      'currentUserRoles' => [],
+      'harbourmasterUserKey' => NULL,
+    ],
+    'template' => 'status',
+  ];
+
+  return $theme;
+}

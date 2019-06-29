@@ -1,0 +1,12 @@
+#menu-main-navigation {
+  @extend %menu--main-navigation;
+}
+
+#menu-open-btn {
+  @extend %menu__sidebar-btn--main-navigation;
+}
+
+#search-open-btn {
+  @extend %menu__search-btn--main-navigation;
+}
+

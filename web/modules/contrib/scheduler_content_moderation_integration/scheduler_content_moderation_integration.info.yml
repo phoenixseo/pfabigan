@@ -1,0 +1,14 @@
+name: Scheduler Content Moderation Integration
+type: module
+description: 'Scheduler sub-module providing content moderation functionality for publishing/unpublishing.'
+# core: 8.x
+dependencies:
+  - drupal:options
+  - drupal:content_moderation
+  - scheduler:scheduler
+
+# Information added by Drupal.org packaging script on 2019-06-11
+version: '8.x-1.0-beta2'
+core: '8.x'
+project: 'scheduler_content_moderation_integration'
+datestamp: 1560239288

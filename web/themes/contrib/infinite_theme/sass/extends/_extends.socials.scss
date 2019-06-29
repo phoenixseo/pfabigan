@@ -1,0 +1,31 @@
+%socials-default-item {
+  @include socials-default-item();
+}
+
+%socials-default-items {
+  @include socials-default-items();
+}
+
+%socials-teaser-horizontal-bar-item {
+  @include socials-teaser-horizontal-bar-item();
+}
+
+%socials-clean-horizontal-bar-item {
+  @include socials-clean-horizontal-bar-item();
+}
+
+%socials-clean-horizontal-bar-item--light {
+  @include socials-clean-horizontal-bar-item--light();
+}
+
+%socials-media-horizontal-bar-item {
+  @include socials-media-horizontal-bar-item();
+}
+
+%socials-labeled-horizontal-bar-item {
+  @include socials-labeled-horizontal-bar-item();
+}
+
+%socials-vertical-bar-item {
+  @include socials-vertical-bar-item();
+}

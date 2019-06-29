@@ -1,0 +1,15 @@
+name: 'Media Riddle Marketplace'
+description: 'Integrates riddle module with media_entity'
+package: Riddle
+type: module
+# core: 8.x
+
+dependencies:
+  - media_entity:media_entity
+  - riddle_marketplace:riddle_marketplace
+
+# Information added by Drupal.org packaging script on 2018-09-03
+version: '8.x-2.2'
+core: '8.x'
+project: 'riddle_marketplace'
+datestamp: 1535982785

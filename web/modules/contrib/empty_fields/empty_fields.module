@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Contains the implementation for the empty_fields module.
+ */
+
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\FormatterInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function empty_fields_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.empty_fields':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a way to show empty fields that would otherwise be hidden.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_field_formatter_third_party_settings_form().
+ */
+function empty_fields_field_formatter_third_party_settings_form(FormatterInterface $plugin, FieldDefinitionInterface $field_definition, $view_mode, $form, FormStateInterface $form_state) {
+  // @todo Implement plugin manager.
+  $element['handler'] = array(
+    '#type' => 'select',
+    '#title' => t('Empty display options'),
+    '#default_value' => $plugin->getThirdPartySetting('empty_fields', 'handler', ''),
+    '#options' => array(
+      '' => t('Exclude field from output'),
+      // @todo Add other plugins from manager and forms with form() method.
+      'nbsp' => t('Empty space'),
+    ),
+  );
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary_alter().
+ */
+function empty_fields_field_formatter_settings_summary_alter(&$summary, $context) {
+  // @todo Get summary from handler with summaryText() method.
+  $handler = $context['formatter']->getThirdPartySetting('empty_fields', 'handler', '');
+  if ($handler === 'nbsp') {
+    $summary[] = t('Empty text displayed.');
+  }
+}
+
+/**
+ * Implements hook_entity_display_build_alter().
+ */
+function empty_fields_entity_display_build_alter(&$build, $context) {
+  /** @var \Drupal\Core\Entity\EntityInterface $entity */
+  $entity = $context['entity'];
+  /** @var \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display */
+  $display = $context['display'];
+  foreach (Element::children($build) as $field_name) {
+    if ($entity->get($field_name)->isEmpty() && ($handler = $display->getRenderer($field_name)->getThirdPartySetting('empty_fields', 'handler'))) {
+      // @todo Get render with react() method.
+      if ($handler === 'nbsp') {
+        $markup = ['#markup' => '&nbsp;'];
+      }
+      /** @var \Drupal\Core\Field\FieldDefinitionInterface $definition */
+      $definition = $entity->get($field_name)->getFieldDefinition();
+      $component = $display->getComponent($field_name);
+
+      $build[$field_name] = [
+          '#theme' => 'field',
+          '#title' => $definition->getLabel(),
+          '#label_display' => $component['label'],
+          '#view_mode' => $context['view_mode'],
+          '#language' => $entity->get($field_name)->getLangcode(),
+          '#field_name' => $definition->getName(),
+          '#field_type' => 'string',
+          '#field_translatable' => $definition->isTranslatable(),
+          '#entity_type' => $entity->getEntityTypeId(),
+          '#bundle' => $entity->bundle(),
+          '#object' => $entity,
+          '#items' => [(object) ['_attributes' => []]],
+          '#is_multiple' => FALSE,
+          // Use simple formatter.
+          '#formatter' => 'string',
+          '0' => $markup,
+        ] + $build[$field_name];
+    }
+  }
+}

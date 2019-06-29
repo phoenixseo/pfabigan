@@ -1,0 +1,11 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Update base fields to the schema.
+ */
+function infinite_base_update_8104() {
+  // Do nothing here any more. Add 8105 with migrate code when new field type is ready.
+}
+

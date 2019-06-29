@@ -1,0 +1,146 @@
+.region-full-content.region-marketing {
+  @include transition-property(background-color, opacity, visibility);
+  @include transition-duration($transition-duration);
+  @include transition-timing-function($transition-easing);
+  background-color: $white;
+  //max-height: 0;
+  overflow: hidden;
+
+  &.ad-active {
+    background-color: $bg-color-gray-light;
+    padding-top: 0;
+    border-bottom: $h-line-style;
+  }
+
+  .container-marketing {
+    padding: $gap-section 0;
+  }
+
+  .item-marketing {
+    text-align: center;
+  }
+
+  .item-label {
+    position: absolute;
+    left: 0;
+    top: $gap-section;
+    text-align: left;
+  }
+
+  .ad-container {
+    background-color: $white;
+    border: $h-line-style;
+    max-width: 100%;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .item-label {
+      top: 10px;
+    }
+  }
+}
+
+.item-marketing-sponsored {
+  margin-bottom: $gap-section;
+}
+
+.item-marketing-advertorial {
+  @extend %text-content-size-small;
+  color: $gray-base;
+  text-transform: uppercase;
+}
+
+.item-marketing-native {
+
+  .logo {
+    margin-bottom: 5px;
+  }
+
+  .logo, .brand {
+    display: inline-block;
+    height: 20px;
+  }
+
+  .separator {
+    margin: 0 1px 0 3px;
+    font-family: $font-content-bold;
+    vertical-align: middle;
+    display: inline-block;
+    padding-top: 4px;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.container-marketing {
+  position: relative;
+
+  .item-label {
+    @extend %text-tiny;
+    @extend %text-tiny-size-small;
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+[data-view-type="marketingView"] {
+  @extend %transition-fade;
+  @extend %fade-out;
+
+  &.ad-active {
+    @extend %fade-in;
+  }
+}
+
+.container-marketing-sidebar {
+
+}
+
+.container-row-sidebar .item-marketing {
+
+}
+
+.ad-active {
+
+}
+
+.region-full-content.region-marketing.ad-bsad {
+  padding: 0;
+  border: 0;
+  overflow: visible;
+
+  .container-marketing {
+    max-width: none;
+    padding: 0px;
+  }
+
+  .ad-container {
+    display: block;
+    border: 0;
+  }
+
+  .item-label {
+    display: none;
+  }
+}
+
+.ad-inactive {
+  overflow: hidden;
+  height: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+//tracdelight widget
+.td-widget iframe {
+
+}
+
+
+
+

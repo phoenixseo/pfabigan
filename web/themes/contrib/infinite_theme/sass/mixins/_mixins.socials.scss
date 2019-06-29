@@ -1,0 +1,252 @@
+@mixin socials-bar-container() {
+  overflow: hidden;
+  font-family: initial;
+  font-size: 0;
+
+  .item-social {
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin socials-item-settings($item-size, $font-size, $orientation: horizontal) {
+  @include flexbox($orientation, $orientation == horizontal);
+  @include align-items(center);
+  @include justify-content(center);
+  min-width: $item-size;
+  height: $item-size;
+  text-decoration: none;
+
+  &:before {
+    font-size: $font-size;
+  }
+}
+
+@mixin socials-default-item() {
+  @include transition-property(color, background-color, border-color);
+  @include transition-duration(.35s);
+  @include transition-timing-function(ease);
+
+  font-size: $socials-icon-size-md;
+  color: $white;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: $socials-default-border-radius;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+@mixin socials-default-items() {
+  .icon-facebook {
+    @extend %icon-facebook;
+    background-color: $color-facebook;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+
+  .icon-twitter {
+    @extend %icon-twitter;
+    background-color: $color-twitter;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+
+  .icon-pinterest {
+    @extend %icon-pinterest;
+    background-color: $color-pinterest;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+
+  .icon-instagram {
+    @extend %icon-instagram;
+    background-color: $color-instagram;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+
+  .icon-email {
+    @extend %icon-email;
+    background-color: $color-email;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+
+  .icon-whatsapp {
+    background-color: $color-whatsapp;
+
+    &:before {
+      margin-right: -1px;
+    }
+
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+}
+
+/** vertical bar **/
+
+@mixin socials-vertical-bar-item() {
+  text-align: center;
+  @media (min-width: $screen-sm-min) {
+    display: block;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    @include socials-item-settings($socials-vertical-bar-size-mobile, $socials-vertical-bar-icon-size-mobile);
+    margin-left: $socials-vertical-bar-left-gap-mobile;
+    margin-top: $socials-vertical-bar-top-gap-mobile;
+    //display: inline-block;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @include socials-item-settings($socials-vertical-bar-size-tablet, $socials-vertical-bar-icon-size-tablet, vertical);
+    margin-top: $socials-vertical-bar-top-gap-tablet;
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include socials-item-settings($socials-vertical-bar-size-desktop, $socials-vertical-bar-icon-size-desktop, vertical);
+    margin-top: $socials-vertical-bar-top-gap-desktop;
+  }
+}
+
+/** horizontal teaser bar **/
+@mixin socials-teaser-horizontal-bar-item() {
+  margin-left: $socials-teaser-horizontal-bar-left-gap;
+  display: inline-block;
+  text-align: center;
+
+  @media (max-width: $screen-xs-max) {
+    @include socials-item-settings($socials-teaser-horizontal-bar-size-mobile, $socials-teaser-horizontal-bar-icon-size-mobile);
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @include socials-item-settings($socials-teaser-horizontal-bar-size-tablet, $socials-teaser-horizontal-bar-icon-size-tablet);
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include socials-item-settings($socials-teaser-horizontal-bar-size-desktop, $socials-teaser-horizontal-bar-icon-size-desktop);
+  }
+}
+
+/** horizontal clean bar **/
+@mixin socials-clean-horizontal-bar-item($bg: transparent,
+  $color: $text-color,
+  $border: 1px solid $color,
+  $bg-hover: transparent,
+  $color-hover: inherit,
+  $border-color-hover: inherit) {
+
+    display: inline-block;
+    background-color: $bg;
+    border: $border;
+    color: $color;
+    margin-left: $socials-clean-horizontal-bar-left-gap;
+    text-align: center;
+
+    -webkit-transform: rotate(0.0001deg); //smoothing
+
+    &:hover {
+      background-color: $bg-hover;
+      color: $color-hover;
+      border-color: $border-color-hover;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      @include socials-item-settings($socials-clean-horizontal-bar-size-mobile, $socials-clean-horizontal-bar-icon-size-mobile);
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      @include socials-item-settings($socials-clean-horizontal-bar-size-tablet, $socials-clean-horizontal-bar-icon-size-tablet);
+    }
+
+    @media (min-width: $screen-md-min) {
+      @include socials-item-settings($socials-clean-horizontal-bar-size-desktop, $socials-clean-horizontal-bar-icon-size-desktop);
+    }
+}
+
+@mixin socials-clean-horizontal-bar-item--light($bg: $socials-clean-horizontal-bar--light-bg-color,
+  $color: $socials-clean-horizontal-bar--light-color,
+  $border: $socials-clean-horizontal-bar--light-border,
+  $bg-hover: $socials-clean-horizontal-bar--light-bg-color-hover,
+  $color-hover: $socials-clean-horizontal-bar--light-color-hover,
+  $border-color-hover: $socials-clean-horizontal-bar--light-border-color-hover) {
+
+  @include socials-clean-horizontal-bar-item($bg, $color, $border, $bg-hover, $color-hover, $border-color-hover);
+}
+
+/** horizontal media bar **/
+@mixin socials-media-horizontal-bar-item() {
+  display: inline-block;
+  text-align: center;
+  margin-left: $socials-media-left-gap;
+
+  @media (max-width: $screen-xs-max) {
+    @include socials-item-settings($socials-media-horizontal-bar-size-mobile, $socials-media-horizontal-bar-icon-size-mobile);
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @include socials-item-settings($socials-media-horizontal-bar-size-tablet, $socials-media-horizontal-bar-icon-size-tablet);
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include socials-item-settings($socials-media-horizontal-bar-size-desktop, $socials-media-horizontal-bar-icon-size-desktop);
+  }
+}
+
+/** horizontal bar **/
+@mixin socials-labeled-horizontal-bar-item() {
+  //margin-top: $padding;
+  text-align: center;
+  display: inline-block;
+
+  span {
+    display: inline-block;
+    text-transform: uppercase;
+    vertical-align: top;
+    padding-left: $gap-size-xxs;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    @include socials-item-settings($socials-labeled-horizontal-bar-size-mobile, $socials-labeled-horizontal-bar-icon-size-mobile);
+    margin-left: $socials-labeled-horizontal-bar-left-gap-mobile;
+    padding: 0;
+
+    span {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    border-radius: $socials-labeled-horizontal-bar-border-radius;
+    padding: 0 22px;
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @include socials-item-settings($socials-labeled-horizontal-bar-size-tablet, $socials-labeled-horizontal-bar-icon-size-tablet);
+    margin-left: $socials-labeled-horizontal-bar-left-gap-tablet;
+  }
+
+  @media (min-width: $screen-md-min) {
+    @include socials-item-settings($socials-labeled-horizontal-bar-size-desktop, $socials-labeled-horizontal-bar-icon-size-desktop);
+    margin-left: $socials-labeled-horizontal-bar-left-gap-desktop;
+  }
+}

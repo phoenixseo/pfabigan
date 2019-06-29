@@ -1,0 +1,803 @@
+# German translation of Harbourmater SSO Widgets
+#
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-06-10 18:05+0200\n"
+"PO-Revision-Date: 2016-06-10 18:05+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# German translation of Harbourmater SSO Widgets
+
+
+msgid "harbourmaster.widget.confirmation.title.confirmed"
+msgstr "Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Vielen Dank!"
+
+msgid "harbourmaster.widget.confirmation.title.invalidToken"
+msgstr "Der Link ist leider ungültig."
+
+msgid "harbourmaster.widget.resetPassword.title.invalidToken"
+msgstr "Unerlaubter Zugriff! Bitte registrieren Sie sich erneut oder melden Sie sich mit Ihrem Passwort an."
+
+msgid "harbourmaster.widget.resetPassword.title.questions"
+msgstr "Bitte beantworten Sie die Sicherheitsfrage"
+
+msgid "harbourmaster.widget.resetPassword.title.success"
+msgstr "Bitte überprüfen Sie Ihr Postfach"
+
+msgid "harbourmaster.widget.resetPassword.title.passwordreset"
+msgstr "Passwort vergessen?"
+
+msgid "harbourmaster.widget.resetPassword.label.new_password"
+msgstr "neues Passwort / neues Passwort wiederholen"
+
+msgid "harbourmaster.widget.resetPassword.label.username"
+msgstr "E-Mail-Adresse"
+
+msgid "harbourmaster.widget.resetPassword.placeholder.new_password"
+msgstr "neues Passwort"
+
+msgid "harbourmaster.widget.resetPassword.placeholder.validation_password"
+msgstr "neues Passwort wiederholen"
+
+msgid "harbourmaster.widget.resetPassword.placeholder.username"
+msgstr "E-Mail-Adresse"
+
+msgid "harbourmaster.widget.resetPassword.description.success_message"
+msgstr "Wir haben Ihnen soeben eine E-Mail mit einem Link zum Erstellen eines neuen Passwortes zugeschickt."
+
+msgid "harbourmaster.widget.resetPassword.description.set_password"
+msgstr "Bitte beantworten Sie jetzt die Sicherheitsfragen."
+
+msgid "harbourmaster.widget.resetPassword.button.passwordreset"
+msgstr "neues Passwort anfordern"
+
+msgid "harbourmaster.widget.resetPassword.button.set_password"
+msgstr "neues Passwort speichern"
+
+msgid "harbourmaster.widget.resetPassword.error.username.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.resetPassword.error.username.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.resetPassword.error.username.error"
+msgstr "unbekannter Fehler"
+
+msgid "harbourmaster.widget.resetPassword.error.username.credentials"
+msgstr "Zugangsdaten fehlerhaft"
+
+msgid "harbourmaster.widget.resetPassword.error.username.regex"
+msgstr "ungültiger Aufbau"
+
+msgid "harbourmaster.widget.resetPassword.error.username.AccountHasNoEmailAddress"
+msgstr "keine E-Mail-Adresse hinterlegt"
+
+msgid "harbourmaster.widget.resetPassword.error.username.NoSuchUser"
+msgstr "unbekannter Benutzer"
+
+msgid "harbourmaster.widget.resetPassword.error.username.ConfirmationEmailSent"
+msgstr "Ihr Account wurde noch nicht aktiviert. Wir haben Ihnen den Bestätigungslink noch einmal zugeschickt. Bitte überprüfen Sie Ihren Spam-Ordner, falls Sie die E-Mail nicht erhalten haben."
+
+msgid "harbourmaster.widget.resetPassword.flash.success"
+msgstr "Die Änderungen wurden erfolgreich gespeichert."
+
+msgid "harbourmaster.widget.resetPassword.flash.error"
+msgstr "Leider ist da etwas schiefgegangen!"
+
+msgid "harbourmaster.widget.resetPassword.flash.passwordreset.error"
+msgstr "Leider ist da etwas schiefgegangen!"
+
+msgid "harbourmaster.widget.resetPassword.intro.text"
+msgstr "Sie haben Ihr Passwort vergessen? Kein Problem: Befolgen Sie einfach die folgenden Anweisungen, um ein neues Passwort anzulegen."
+
+msgid "harbourmaster.widget.profile.title.profile"
+msgstr "Ihr Profil"
+
+msgid "harbourmaster.widget.profile.title.member"
+msgstr "Benutzername"
+
+msgid "harbourmaster.widget.profile.title.password"
+msgstr "Passwort"
+
+msgid "harbourmaster.widget.profile.title.securityQuestions"
+msgstr "Sicherheitsfrage"
+
+msgid "harbourmaster.widget.profile.title.memberAdvertisement"
+msgstr "Jetzt Mitglied werden..."
+
+msgid "harbourmaster.widget.profile.label.day"
+msgstr "Tag"
+
+msgid "harbourmaster.widget.profile.label.month"
+msgstr "Monat"
+
+msgid "harbourmaster.widget.profile.label.year"
+msgstr "Jahr"
+
+msgid "harbourmaster.widget.profile.label.address"
+msgstr "Adresse / Telefon"
+
+msgid "harbourmaster.widget.profile.label.oldPassword"
+msgstr "altes Passwort *"
+
+msgid "harbourmaster.widget.profile.label.password"
+msgstr "neues Passwort / Passwort wiederholen *"
+
+msgid "harbourmaster.widget.profile.label.protectProfile"
+msgstr "Mein Profil ist nur für registrierte Mitglieder öffentlich"
+
+msgid "harbourmaster.widget.profile.label.avatar"
+msgstr "Profilbild / Benutzername"
+
+msgid "harbourmaster.widget.profile.label.avatarEdit"
+msgstr "Profilbild"
+
+msgid "harbourmaster.widget.profile.label.displayName"
+msgstr "Benutzername *"
+
+msgid "harbourmaster.widget.profile.label.name"
+msgstr "Anrede / Vorname / Nachname / Geburtstag"
+
+msgid "harbourmaster.widget.profile.label.email"
+msgstr "E-Mail-Adresse"
+
+msgid "harbourmaster.widget.profile.label.securityQuestion"
+msgstr "Sicherheitsfrage *"
+
+msgid "harbourmaster.widget.profile.label.answer"
+msgstr "Antwort *"
+
+msgid "harbourmaster.widget.profile.label.community"
+msgstr "Foto-Community"
+
+msgid "harbourmaster.widget.profile.instruction.avatar"
+msgstr "Profilbild hochladen. Ideal ist ein quadratisches Bild im Format PNG, JPEG oder GIF. Die Bildgröße wird auf 75px angepasst."
+
+msgid "harbourmaster.widget.profile.instruction.displayName"
+msgstr "Ihr Benutzername wird anstatt des richtigen Namens bei den Kommentaren angezeigt."
+
+msgid "harbourmaster.widget.profile.placeholder.oldPassword"
+msgstr "altes Passwort"
+
+msgid "harbourmaster.widget.profile.placeholder.password"
+msgstr "neues Passwort"
+
+msgid "harbourmaster.widget.profile.placeholder.verifyPassword"
+msgstr "neues Passwort wiederholen"
+
+msgid "harbourmaster.widget.profile.placeholder.displayName"
+msgstr "Benutzername"
+
+msgid "harbourmaster.widget.profile.placeholder.firstname"
+msgstr "Vorname"
+
+msgid "harbourmaster.widget.profile.placeholder.lastname"
+msgstr "Nachname"
+
+msgid "harbourmaster.widget.profile.placeholder.email_address"
+msgstr "E-Mail-Adresse"
+
+msgid "harbourmaster.widget.profile.placeholder.answer"
+msgstr "Antwort"
+
+msgid "harbourmaster.widget.profile.placeholder.phone"
+msgstr "Telefonnummer"
+
+msgid "harbourmaster.widget.profile.placeholder.address.company"
+msgstr "Firma"
+
+msgid "harbourmaster.widget.profile.placeholder.address.street"
+msgstr "Straße"
+
+msgid "harbourmaster.widget.profile.placeholder.address.streetNumber"
+msgstr "Hausnummer"
+
+msgid "harbourmaster.widget.profile.placeholder.address.postcode"
+msgstr "PLZ"
+
+msgid "harbourmaster.widget.profile.placeholder.address.city"
+msgstr "Ort"
+
+msgid "harbourmaster.widget.profile.placeholder.address.country"
+msgstr "Land"
+
+msgid "harbourmaster.widget.profile.select.salutation.mr"
+msgstr "Herr"
+
+msgid "harbourmaster.widget.profile.select.salutation.mrs"
+msgstr "Frau"
+
+msgid "harbourmaster.widget.profile.select.salutation.none"
+msgstr ""
+
+msgid "harbourmaster.widget.profile.checkbox.subscription.advertising"
+msgstr "Ja, ich bin damit einverstanden, dass mich die MSG per E-Mail über Neuigkeiten und Angebote zu MSG Germany informiert. Dieses Einverständnis kann ich jederzeit widerrufen und der Verarbeitung oder Nutzung meiner Daten für Zwecke der Werbung bzw. der Markt- oder Meinungsforschung jederzeit bei der MSG widersprechen."
+
+msgid "harbourmaster.widget.profile.checkbox.subscription.newsletter"
+msgstr "Ja, ich möchte den kostenlosen MSG-Newsletter Daily Bits abonnieren: Morgens das Neueste aus Technologie, Kultur, Wissenschaft, Business und Design."
+
+msgid "harbourmaster.widget.profile.tab.profile"
+msgstr "Profil"
+
+msgid "harbourmaster.widget.profile.tab.entitlements"
+msgstr "Mitglied"
+
+msgid "harbourmaster.widget.profile.button.upload"
+msgstr "Profilbild hochladen"
+
+msgid "harbourmaster.widget.profile.button.change_password"
+msgstr "Passwort ändern"
+
+msgid "harbourmaster.widget.profile.button.security_question"
+msgstr "Sicherheitsfrage ändern"
+
+msgid "harbourmaster.widget.profile.button.memberAdvertisement"
+msgstr "Jetzt Mitglied werden!"
+
+msgid "harbourmaster.widget.profile.button.post_entitlement"
+msgstr "Sind Sie bereits Mitglied? Geben Sie hier Ihre Kundennummer ein."
+
+msgid "harbourmaster.widget.profile.button.entitelement_post_entitlement"
+msgstr "Weitere Kundennummer eingeben"
+
+msgid "harbourmaster.widget.profile.error.displayName.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.displayName.maxLength"
+msgstr "maximal 18 Zeichen eingeben"
+
+msgid "harbourmaster.widget.profile.error.displayName.minLength"
+msgstr "mindestens 3 Zeichen eingeben"
+
+msgid "harbourmaster.widget.profile.error.displayName.DisplayNameAlreadyExists"
+msgstr "Der Benutzername ist bereits vergeben"
+
+msgid "harbourmaster.widget.profile.error.displayName.DisplayNameIsRequired"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.displayName.regex"
+msgstr "Im Nutzernamen sind nur folgende Zeichen erlaubt: Großbuchstaben, Kleinbuchstaben, Zahlen, Unterstriche, Bindestriche und Leerzeichen"
+
+msgid "harbourmaster.widget.profile.error.displayName.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.email.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.email.regex"
+msgstr "ungültige E-Mail-Adresse"
+
+msgid "harbourmaster.widget.profile.error.email.fakeemail"
+msgstr "bitte eine andere E-Mail-Adresse verwenden!"
+
+msgid "harbourmaster.widget.profile.error.email.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.email.LoginAlreadyExists"
+msgstr "Dieser Nutzername ist bereits registriert"
+
+msgid "harbourmaster.widget.profile.error.email.EmailAlreadyExists"
+msgstr "Diese E-Mail-Adresse ist bereits registriert"
+
+msgid "harbourmaster.widget.profile.error.email.ArgLoginIsRequired"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.email.LoginCannotBeEmpty"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.oldPassword.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.oldPassword.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.oldPassword.IncorrectOldPassword"
+msgstr "Ungültiges altes Passwort"
+
+msgid "harbourmaster.widget.profile.error.password.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.password.minLength"
+msgstr "mindestens 8 Zeichen eingeben"
+
+msgid "harbourmaster.widget.profile.error.password.regex"
+msgstr "Ungültiges Passwort: bitte Zahlen, Groß- und Kleinbuchstaben verwenden."
+
+msgid "harbourmaster.widget.profile.error.password.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.password.ArgPasswordIsInvalid"
+msgstr "ungültiges Passwort"
+
+msgid "harbourmaster.widget.profile.error.password.NoNumbers"
+msgstr "Das Passwort muss Zahlen enthalten"
+
+msgid "harbourmaster.widget.profile.error.password.NoLowerCaseLetters"
+msgstr "Das Passwort muss Kleinbuchstaben enthalten"
+
+msgid "harbourmaster.widget.profile.error.password.NoUpperCaseLetters"
+msgstr "Das Passwort muss Großbuchstaben enthalten"
+
+msgid "harbourmaster.widget.profile.error.password.NotMinEigth"
+msgstr "Das Passwort muss mindestens 8 Zeichen lang sein"
+
+msgid "harbourmaster.widget.profile.error.verifyPassword.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.verifyPassword.passwordEqual"
+msgstr "Die Passwörter stimmen nicht überein"
+
+msgid "harbourmaster.widget.profile.error.verifyPassword.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.verifyPassword.PasswordsDoNotMatch"
+msgstr "Die Passwörter stimmen nicht überein"
+
+msgid "harbourmaster.widget.profile.error.salutation.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.salutation.in"
+msgstr "Bitte auswählen"
+
+msgid "harbourmaster.widget.profile.error.salutation.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.firstname.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.firstname.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.lastname.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.lastname.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.error.securityQuestions.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.profile.error.securityQuestions.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.profile.info.password"
+msgstr "Das Passwort muss mindestens 8 Zeichen lang sein und Zahlen, Groß- und Kleinbuchstaben enthalten."
+
+msgid "harbourmaster.widget.profile.flash.success"
+msgstr "Änderungen erfolgreich gespeichert"
+
+msgid "harbourmaster.widget.profile.flash.error"
+msgstr "Leider ist ein Fehler aufgetreten!"
+
+msgid "harbourmaster.widget.signup.title.signup"
+msgstr "Werden Sie Mitglied!"
+
+msgid "harbourmaster.widget.signup.title.error"
+msgstr "Leider ist ein Fehler aufgetreten."
+
+msgid "harbourmaster.widget.signup.title.success"
+msgstr "Herzlich willkommen!"
+
+msgid "harbourmaster.widget.signup.label.displayName"
+msgstr "Benutzername *"
+
+msgid "harbourmaster.widget.signup.label.email"
+msgstr "E-Mail-Adresse *"
+
+msgid "harbourmaster.widget.signup.label.password"
+msgstr "Passwort / Passwort wiederholen *"
+
+msgid "harbourmaster.widget.signup.label.name"
+msgstr "Anrede / Vorname / Nachname *"
+
+msgid "harbourmaster.widget.signup.label.error"
+msgstr "Das hat leider nicht funktioniert"
+
+msgid "harbourmaster.widget.signup.label.firstname"
+msgstr "Vorname *"
+
+msgid "harbourmaster.widget.signup.label.lastname"
+msgstr "Nachname *"
+
+msgid "harbourmaster.widget.signup.placeholder.displayName"
+msgstr "Benutzername *"
+
+msgid "harbourmaster.widget.signup.placeholder.email"
+msgstr "E-Mail-Adresse *"
+
+msgid "harbourmaster.widget.signup.placeholder.password"
+msgstr "Neues Passwort *"
+
+msgid "harbourmaster.widget.signup.placeholder.verifyPassword"
+msgstr "Neues Passwort wiederholen *"
+
+msgid "harbourmaster.widget.signup.placeholder.firstname"
+msgstr "Vorname *"
+
+msgid "harbourmaster.widget.signup.placeholder.lastname"
+msgstr "Nachname *"
+
+msgid "harbourmaster.widget.signup.select.salutation.none"
+msgstr "bitte auswählen"
+
+msgid "harbourmaster.widget.signup.select.salutation.mr"
+msgstr "Herr"
+
+msgid "harbourmaster.widget.signup.select.salutation.mrs"
+msgstr "Frau"
+
+msgid "harbourmaster.widget.signup.checkbox.terms_and_policy"
+msgstr "Ich akzeptiere die Nutzungsbedingungen *"
+
+msgid "harbourmaster.widget.signup.checkbox.subscription.advertising"
+msgstr "Ja, ich bin damit einverstanden, dass mich die MSG per E-Mail über Neuigkeiten und Angebote zu MSG Germany informiert. Dieses Einverständnis kann ich jederzeit widerrufen und der Verarbeitung oder Nutzung meiner Daten für Zwecke der Werbung bzw. der Markt- oder Meinungsforschung jederzeit bei der MSG widersprechen."
+
+msgid "harbourmaster.widget.signup.checkbox.subscription.newsletter"
+msgstr "Ja, ich möchte den kostenlosen MSG-Newsletter Daily Bits abonnieren: Morgens das Neueste aus Technologie, Kultur, Wissenschaft, Business und Design."
+
+msgid "harbourmaster.widget.signup.button.signup"
+msgstr "kostenlos registrieren"
+
+msgid "harbourmaster.widget.signup.button.signin"
+msgstr "zum Login"
+
+msgid "harbourmaster.widget.signup.error.displayName.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signup.error.displayName.maxLength"
+msgstr "maximal 18 Zeichen eingeben"
+
+msgid "harbourmaster.widget.signup.error.displayName.minLength"
+msgstr "mindestens 3 Zeichen eingeben"
+
+msgid "harbourmaster.widget.signup.error.displayName.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.displayName.LoginAlreadyExists"
+msgstr "Der gewünschte Benutzername ist bereits vergeben"
+
+msgid "harbourmaster.widget.signup.error.displayName.DisplayNameAlreadyExists"
+msgstr "Der gewünschte Benutzername ist bereits vergeben"
+
+msgid "harbourmaster.widget.signup.error.displayName.DisplayNameIsRequired"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.displayName.regex"
+msgstr "Im Nutzernamen sind nur folgende Zeichen erlaubt: Großbuchstaben, Kleinbuchstaben, Zahlen, Unterstriche, Bindestriche und Leerzeichen"
+
+msgid "harbourmaster.widget.signup.error.email.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signup.error.email.regex"
+msgstr "ungültige E-Mail-Adresse"
+
+msgid "harbourmaster.widget.signup.error.email.fakeemail"
+msgstr "bitte eine andere E-Mail-Adresse verwenden!"
+
+msgid "harbourmaster.widget.signup.error.email.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.email.LoginAlreadyExists"
+msgstr "Dieser Nutzername ist bereits registriert"
+
+msgid "harbourmaster.widget.signup.error.email.EmailAlreadyExists"
+msgstr "Diese E-Mail-Adresse ist bereits registriert"
+
+msgid "harbourmaster.widget.signup.error.email.ArgLoginIsRequired"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.email.LoginCannotBeEmpty"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.password.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signup.error.password.minLength"
+msgstr "mindestens 8 Zeichen eingeben"
+
+msgid "harbourmaster.widget.signup.error.password.regex"
+msgstr "Ungültiges Passwort: bitte Zahlen, Groß- und Kleinbuchstaben verwenden"
+
+msgid "harbourmaster.widget.signup.error.password.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.password.ArgPasswordIsInvalid"
+msgstr "ungültiges Passwort"
+
+msgid "harbourmaster.widget.signup.error.password.NoNumbers"
+msgstr "Das Passwort muss Zahlen enthalten"
+
+msgid "harbourmaster.widget.signup.error.password.NoLowerCaseLetters"
+msgstr "Das Passwort muss Kleinbuchstaben enthalten"
+
+msgid "harbourmaster.widget.signup.error.password.NoUpperCaseLetters"
+msgstr "Das Passwort muss Großbuchstaben enthalten"
+
+msgid "harbourmaster.widget.signup.error.password.NotMinEigth"
+msgstr "Das Passwort muss mindestens 8 Zeichen lang sein"
+
+msgid "harbourmaster.widget.signup.error.verifyPassword.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signup.error.verifyPassword.passwordEqual"
+msgstr "Die Passwörter stimmen nicht überein"
+
+msgid "harbourmaster.widget.signup.error.verifyPassword.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.verifyPassword.PasswordsDoNotMatch"
+msgstr "Die Passwörter stimmen nicht überein"
+
+msgid "harbourmaster.widget.signup.error.salutation.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signup.error.salutation.in"
+msgstr "bitte auswählen"
+
+msgid "harbourmaster.widget.signup.error.salutation.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.firstname.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signup.error.firstname.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.lastname.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signup.error.lastname.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.error.terms.boolean"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signup.error.terms.truthy"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signup.intro.teaser"
+msgstr "es ist einfach"
+
+msgid "harbourmaster.widget.signup.intro.text"
+msgstr "In nur 2 Minuten zum eigenen Profil."
+
+msgid "harbourmaster.widget.signup.info.password"
+msgstr "Das Passwort muss mindestens 8 Zeichen lang sein und Zahlen, Groß- und Kleinbuchstaben enthalten."
+
+msgid "harbourmaster.widget.signup.flash.error"
+msgstr "Leider ist ein Fehler aufgetreten."
+
+msgid "harbourmaster.widget.signup.flash.success"
+msgstr "Vielen Dank für Ihre Registrierung, bitte überprüfen Sie jetzt Ihr Postfach und bestätigen Sie Ihre Emailadresse"
+
+msgid "harbourmaster.widget.signin.title.signin"
+msgstr "anmelden"
+
+msgid "harbourmaster.widget.signin.title.success"
+msgstr "Anmeldung erfolgreich!"
+
+msgid "harbourmaster.widget.signin.title.passwordreset"
+msgstr "Passwort vergessen?"
+
+msgid "harbourmaster.widget.signin.title.passwordresetinit"
+msgstr "Die E-Mail zum Zurücksetzen Ihres Passworts wurde versendet."
+
+msgid "harbourmaster.widget.signin.title.unconfirmed"
+msgstr "Ihre E-Mail-Adresse ist noch nicht bestätigt"
+
+msgid "harbourmaster.widget.signin.label.username"
+msgstr "Benutzername / E-Mail-Adresse"
+
+msgid "harbourmaster.widget.signin.label.password"
+msgstr "Passwort"
+
+msgid "harbourmaster.widget.signin.placeholder.username"
+msgstr "Benutzername / E-Mail-Adresse"
+
+msgid "harbourmaster.widget.signin.placeholder.password"
+msgstr "Passwort"
+
+msgid "harbourmaster.widget.signin.button.signin"
+msgstr "Login"
+
+msgid "harbourmaster.widget.signin.button.signup"
+msgstr "Werden Sie Mitglied!"
+
+msgid "harbourmaster.widget.signin.button.passwordreset"
+msgstr "Neues Passwort anfordern"
+
+msgid "harbourmaster.widget.signin.button.unconfirmed"
+msgstr "Email noch einmal senden"
+
+msgid "harbourmaster.widget.signin.error.username.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signin.error.username.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.signin.error.username.error"
+msgstr "unbekannter Fehler"
+
+msgid "harbourmaster.widget.signin.error.username.credentials"
+msgstr "Zugangsdaten fehlerhaft"
+
+msgid "harbourmaster.widget.signin.error.username.regex"
+msgstr "ungültiger Aufbau"
+
+msgid "harbourmaster.widget.signin.error.username.AccountHasNoEmailAddress"
+msgstr "keine E-Mail-Adresse hinterlegt"
+
+msgid "harbourmaster.widget.signin.error.username.NoSuchUser"
+msgstr "unbekannter Benutzer"
+
+msgid "harbourmaster.widget.signin.error.username.UserNotConfirmed"
+msgstr "Ihr Account wurde noch nicht aktiviert"
+
+msgid "harbourmaster.widget.signin.error.password.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signin.error.password.error"
+msgstr "unbekannter Fehler"
+
+msgid "harbourmaster.widget.signin.error.password.credentials"
+msgstr "Zugangsdaten fehlerhaft"
+
+msgid "harbourmaster.widget.signin.error.requesttoken.LoginIsRequired"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.signin.error.requesttoken.AccountHasNoEmailAddress"
+msgstr "falsche E-Mail-Adresse"
+
+msgid "harbourmaster.widget.signin.error.requesttoken.NoSuchUser"
+msgstr "falsche E-Mail-Adresse"
+
+msgid "harbourmaster.widget.signin.message.unconfirmed"
+msgstr "Ihr Account wurde noch nicht aktiviert. Wir haben Ihnen einen Bestätigungslink zugeschickt. Bitte überprüfen Sie Ihren Spam-Ordner, falls Sie die E-Mail nicht erhalten haben."
+
+msgid "harbourmaster.widget.signin.message.unconfirmedresend"
+msgstr "Wir haben Ihnen den Bestätigungslink noch einmal zugeschickt."
+
+msgid "harbourmaster.widget.signin.message.passwordreset.email_sent"
+msgstr "Die E-Mail zum Zurücksetzen Ihres Passworts wurde versendet."
+
+msgid "harbourmaster.widget.signin.link.passwordreset"
+msgstr "Brauchen Sie Hilfe bei der Anmeldung?"
+
+msgid "harbourmaster.widget.signin.link.activate"
+msgstr "Benutzerprofil aktivieren"
+
+msgid "harbourmaster.widget.signin.tooltip.twitter"
+msgstr "TWITTER"
+
+msgid "harbourmaster.widget.signin.tooltip.facebook"
+msgstr "FACEBOOK"
+
+msgid "harbourmaster.widget.signin.tooltip.google"
+msgstr "GOOGLE"
+
+msgid "harbourmaster.widget.signin.tooltip.linkedin"
+msgstr "LINKEDIN"
+
+msgid "harbourmaster.widget.signin.tooltip.github"
+msgstr "GITHUB"
+
+msgid "harbourmaster.widget.signin.flash.passwordreset.error"
+msgstr "Leider ist ein Fehler aufgetreten."
+
+msgid "harbourmaster.widget.signin.flash.error"
+msgstr "Leider ist ein Fehler aufgetreten."
+
+msgid "harbourmaster.widget.signin.alternate_login_methods"
+msgstr "Sie können sich auch hiermit anmelden:"
+
+msgid "harbourmaster.widget.password.title.invalidToken"
+msgstr "Der Link ist leider ungültig"
+
+msgid "harbourmaster.widget.password.title.reset"
+msgstr "Bitte geben Sie ein neues Passwort an."
+
+msgid "harbourmaster.widget.password.title.securityQuestions"
+msgstr "Bitte beantworten Sie die Sicherheitsfrage"
+
+msgid "harbourmaster.widget.password.title.success"
+msgstr "Ihr Password wurde erfolgreich geändert."
+
+msgid "harbourmaster.widget.password.label.password"
+msgstr "Neues Passwort / Neues Passwort wiederholen"
+
+msgid "harbourmaster.widget.password.placeholder.answer"
+msgstr "Sicherheitsantwort"
+
+msgid "harbourmaster.widget.password.placeholder.password"
+msgstr "neues Passwort"
+
+msgid "harbourmaster.widget.password.placeholder.verifyPassword"
+msgstr "neues Passwort wiederholen"
+
+msgid "harbourmaster.widget.password.button.changePassword"
+msgstr "neues Passwort festlegen"
+
+msgid "harbourmaster.widget.password.error.password.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.password.error.password.minLength"
+msgstr "mindestens 8 Zeichen eingeben"
+
+msgid "harbourmaster.widget.password.error.password.regex"
+msgstr "Ungültiges Passwort: bitte Zahlen, Groß- und Kleinbuchstaben verwenden"
+
+msgid "harbourmaster.widget.password.error.password.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.password.error.password.ArgPasswordIsInvalid"
+msgstr "ungültiges Passwort"
+
+msgid "harbourmaster.widget.password.error.password.NewPasswordRequired"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.password.error.password.NoNumbers"
+msgstr "Das Passwort muss Zahlen enthalten"
+
+msgid "harbourmaster.widget.password.error.password.NoLowerCaseLetters"
+msgstr "Das Passwort muss Kleinbuchstaben enthalten"
+
+msgid "harbourmaster.widget.password.error.password.NoUpperCaseLetters"
+msgstr "Das Passwort muss Großbuchstaben enthalten"
+
+msgid "harbourmaster.widget.password.error.password.NotMinEigth"
+msgstr "Das Passwort muss mindestens 8 Zeichen lang sein"
+
+msgid "harbourmaster.widget.password.error.verifyPassword.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.password.error.verifyPassword.passwordEqual"
+msgstr "Die Passwörter stimmen nicht überein"
+
+msgid "harbourmaster.widget.password.error.verifyPassword.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.password.error.verifyPassword.PasswordsDoNotMatch"
+msgstr "Die Passwörter stimmen nicht überein"
+
+msgid "harbourmaster.widget.password.error.answer.string"
+msgstr "Eingabefehler"
+
+msgid "harbourmaster.widget.password.error.answer.required"
+msgstr "Pflichtfeld"
+
+msgid "harbourmaster.widget.password.error.answer.CannotParseSecurityQuestions"
+msgstr "Die Sicherheitsfrage kann nicht verarbeitet werden"
+
+msgid "harbourmaster.widget.password.error.answer.IncompleteSecurityQuestions"
+msgstr "unvollständige Sicherheitsfrage"
+
+msgid "harbourmaster.widget.password.error.answer.WrongSecurityQuestionsAnswer"
+msgstr "falsche Antwort"
+
+msgid "harbourmaster.widget.password.error.token.PasswordRecoveryTokenRequired"
+msgstr "Ein neuer Link muss versendet werden"
+
+msgid "harbourmaster.widget.password.flash.error"
+msgstr "Das Passwort konnte nicht gespeichert werden."
+
+msgid "harbourmaster.widget.password.intro.text"
+msgstr "Geben Sie hier Ihr neues Passwort ein und bestätigen Sie es mit einem Klick auf &amp;quot;Neues Passwort festlegen&amp;quot;."
+
+msgid "harbourmaster.widget.general.button.save"
+msgstr "speichern"
+
+msgid "harbourmaster.widget.general.button.close"
+msgstr "schließen"
+
+msgid "harbourmaster.widget.general.button.back"
+msgstr "zurück"
+
+msgid "harbourmaster.widget.general.forbidden"
+msgstr "nicht erlaubt"
+
+msgid "harbourmaster.widget.general.error"
+msgstr "Fehler"

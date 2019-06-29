@@ -1,0 +1,141 @@
+[data-internal-url], [data-external-url] {
+  cursor: pointer;
+
+  &:hover {
+    .text-headline {
+      color: $text-highlighted;
+    }
+  }
+}
+
+/**
+* Teaser Default
+**/
+
+.teaser {
+  @extend %teaser-default;
+}
+
+//vertical feed list
+.teaser-list-large {
+  .teaser {
+    @extend %teaser-feed-large;
+    @extend %teaser-feed-large-text;
+    @extend %teaser-feed-large-gap;
+  }
+}
+
+.list__images--horizontal {
+  @extend %swipeable__images--horizontal;
+  @extend %list__images--horizontal;
+
+  .teaser {
+    @extend %list__images--horizontal__item;
+    @extend %swipeable__images--horizontal__item;
+    @extend %teaser-list-h;
+    @extend %teaser-list-h-text;
+  }
+}
+
+.teaser-link-list-horizontal {
+
+}
+
+/**
+* Teaser Landscape
+**/
+
+.teaser-landscape-medium {
+  @extend %teaser-landscape-medium;
+  @extend %teaser-landscape-medium-text;
+}
+
+/**
+* Teaser Fullcontent
+**/
+
+.teaser-full-content {
+  @extend %teaser-full-content;
+}
+
+/**
+* Presenter half
+**/
+
+.teaser-presenter-half {
+  .author {
+    display: none;
+  }
+}
+
+.teaser-landscape-large {
+  & > .caption-teaser {
+    padding-top: $gap-section;
+  }
+}
+
+.teaser-square-xs {
+  @extend %teaser-square-xs;
+}
+
+/**
+  * Teaser Square
+  **/
+
+.teaser-square-medium {
+  & > .img-container, .caption-teaser {
+    @include make-xs-column($grid-columns/2);
+  }
+}
+
+/**
+* Teaser Portrait
+**/
+
+.teaser-portrait-small {
+  & > .img-container {
+    @include make-xs-column($grid-columns/3);
+  }
+
+  .caption-teaser {
+    @include make-xs-column($grid-columns - ($grid-columns/3));
+  }
+}
+
+.teaser-portrait-medium {
+  & > .img-container {
+    @include make-xs-column(floor($grid-columns/2.05));
+  }
+
+  .caption-teaser {
+    @include make-xs-column($grid-columns - floor($grid-columns/2.05));
+  }
+}
+
+.teaser-portrait-small, .teaser-portrait-medium {
+  @media (max-width: $screen-xxs-max) {
+    .img-container img {
+      width: 75%;
+    }
+
+    .caption-teaser {
+      width: 75%;
+    }
+  }
+}
+
+.teaser-content-right {
+  @include make-row();
+
+  .caption-teaser {
+    padding-top: 0;
+  }
+
+  &.teaser-landscape-medium {
+    @media (max-width: $screen-sm-max) {
+      & > .caption-teaser {
+        padding-top: $grid-gutter-width;
+      }
+    }
+  }
+}

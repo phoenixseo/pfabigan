@@ -1,0 +1,66 @@
+@mixin products--horizontal-block {
+  @media (min-width: $screen-sm-min) {
+    .container-content {
+      @include make-row();
+    }
+  }
+}
+
+@mixin product__item--horizontal-block {
+  @include make-sm-column($grid-columns/3);
+
+  position: relative;
+  overflow: hidden;
+  margin-bottom: $gap-size-lg;
+
+  &:hover {
+    .text-shop {
+      background-color: $color-highlighted;
+      color: $white;
+    }
+  }
+
+  .img-container {
+    text-align: center;
+    margin-bottom: $padding;
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      display: inline-block;
+    }
+  }
+
+  .caption {
+    position: relative;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    @include gap--v-xl();
+    border-top: $h-line-style;
+    display: block;
+    width: auto;
+    margin-right: 0;
+
+    &:first-child {
+      @include reset-container-v-gap();
+    }
+
+    .img-container {
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    .img-container, .caption {
+      @include make-xxs-column($grid-columns/2);
+    }
+
+    .caption {
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\Core\Template\Attribute;
+use Drupal\user\Entity\User;
+use Drupal\node\Entity\Node;
+use Drupal\image\Entity\ImageStyle;
+
+function infinite_theme_suggestions_paragraph_alter(array &$suggestions, array $variables, $hook) {
+  // TODO: find a better way to extract media bundle from paragraph item.
+  if (!empty($variables['elements']['field_media']['0']['#media'])) {
+    $paragraph = $variables['elements']['#paragraph'];
+    /* @var Drupal\media_entity\Entity\Media $media */
+    $media = $variables['elements']['field_media']['0']['#media'];
+    $suggestions[] = $hook . '__' . $paragraph->bundle() . '__' . $media->getEntityTypeId() . '_' . $media->bundle();
+    $suggestions[] = $hook . '__' . $paragraph->bundle() . '__' . $media->getEntityTypeId() . '_' . $media->bundle() . '__default';  // TODO: Fix static view mode.
+  }
+}
+
+function infinite_theme_suggestions_user_alter(array &$suggestions, array $variables, $hook) {
+  if (!empty($variables['elements']['#view_mode'])) {
+    $suggestions[] = $hook . '__' . $variables['elements']['#view_mode'];
+  }
+}
+
+function infinite_preprocess_page(&$variables) {
+  $variables['theme_infinite_path'] = '/' . drupal_get_path('theme', 'infinite');
+}
+
+function infinite_preprocess_block(&$variables) {
+  $variables['front_page'] = \Drupal::url('<front>');
+  $variables['logo'] = theme_get_setting('logo.url');
+}
+
+function infinite_preprocess_region(&$variables) {
+  $variables ['front_page'] = \Drupal::url('<front>');
+  $variables ['logo'] = theme_get_setting('logo.url');
+}
+
+function infinite_preprocess_html(&$variables) {
+  if (\Drupal::moduleHandler()->moduleExists('metatag')) {
+    /**
+     * TODO: Does metatag module provide some simpler api call to get metatags?
+     */
+    $metatag_manager = \Drupal::service('metatag.manager');
+    // First, get defaults.
+    $metatags = metatag_get_default_tags();
+    if (!$metatags) {
+      return;
+    }
+
+    $entity = metatag_get_route_entity();
+    if (!empty($entity) && $entity instanceof ContentEntityInterface) {
+      $metatags = array_merge($metatags, $metatag_manager->tagsFromEntity($entity));
+    }
+
+    if (isset($metatags['fb_app_id'])) {
+      $fb_lang = theme_get_setting('facebook_lang');
+      $fb_lang = !empty($fb_lang) ? $fb_lang : 'en_US';
+      $variables['fb_vars'] = ['fb_app_id' => $metatags['fb_app_id'], 'fb_lang' => $fb_lang];
+    }
+    $variables['gtm_vars'] = ['gtm_id' => theme_get_setting('gtm_id')];
+  }
+}
+
+function infinite_preprocess_node(&$variables) {
+  /* @var Node $node */
+  $node = &$variables['elements']['#node'];
+
+  // share buttons received from theme settings
+  $variables['facebook_share_button'] = theme_get_setting('facebook_share_button');
+  $variables['whatsapp_share_button'] = theme_get_setting('whatsapp_share_button');
+  $variables['pinterest_share_button'] = theme_get_setting('pinterest_share_button');
+  $variables['twitter_share_button'] = theme_get_setting('twitter_share_button');
+  $variables['twitter_share_via'] = theme_get_setting('twitter_share_via');
+  $variables['email_share_button'] = theme_get_setting('email_share_button');
+  $variables['whatsapp_share_text'] = theme_get_setting('whatsapp_share_text');
+  $variables['email_share_text'] = theme_get_setting('email_share_text');
+  $variables['email_subject'] = theme_get_setting('email_subject');
+
+  $bundle = $node->bundle();
+  if ($bundle == "article" || $bundle == "page") {
+    // todo: switch later to publish date.
+    $variables['datetime'] = \Drupal::service('date.formatter')
+      ->format($node->created->value, 'html_datetime');
+    $variables['timestamp'] = \Drupal::service('date.formatter')
+      ->format($node->created->value, 'infinite_timestamp');
+
+    // Get absolute URL from node alias URL.
+    $absolute_url = \Drupal::service('path.alias_manager')
+      ->getAliasByPath('/node/' . $node->id());
+    $absolute_url = Url::fromUri('base:/' . $absolute_url, array('absolute' => TRUE));
+
+    // Override TWIG url with absolute alias URL.
+    $variables['path'] = $variables['url'];  // used for lazy loading history API.
+    $variables['url'] = $absolute_url->toString();
+    $variables['nid'] = $node->id();
+
+    // Get share image URL from teaser media.
+    if ($node->hasField('field_teaser_media') &&
+      !$node->field_teaser_media->isEmpty()
+    ) {
+
+      if (!empty($node->field_teaser_media->entity) &&  // todo: check wyh some media entity reference seems to be empty here after isEmpty() check? example: node 6001
+        $node->field_teaser_media->entity->hasField('field_image') &&
+        !$node->field_teaser_media->entity->field_image->isEmpty()
+      ) {
+
+        $share_img_path = $node->field_teaser_media->entity->field_image->entity->getFileUri();
+        $share_img = ImageStyle::load('inline_l');
+        if (is_object($share_img)) {
+          $url = $share_img->buildUrl($share_img_path);
+          $variables['share_img_url'] = $url;
+        }
+      }
+    }
+    // Add 'show_contextual_links' variable.
+    /* @var User $user */
+    $user = Drupal::currentUser();
+    if ($user->hasPermission('access contextual links')) {
+      $variables['show_contextual_links'] = TRUE;
+    }
+  }
+
+  if ($bundle == "article") {
+    $field_seo_title = !empty($node->field_seo_title->getValue()[0]) ? $node->field_seo_title->getValue()[0]['value'] : '';
+    // Replace double quotes.
+    // @toDo check, where we have this case!
+    $variables['node_seo_title'] = str_replace('"', '', $field_seo_title);
+    // Clean up classes array - all classes will be added in
+    $variables['attributes']['class'] = array();
+
+    // Instantiate 'wrapper_attributes' attribute object to avoid collisions
+    // with actual node attributes.
+    if ($variables['view_mode'] === 'full' || $variables['view_mode'] === 'lazyloading') {
+      $variables['wrapper_attributes'] = new Attribute();
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views().
+ */
+function infinite_preprocess_views_view(&$variables) {
+
+  // todo: replace with configurable sidebar views UI plugin.
+  /* @var Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+
+  // Render title for all other views, because we aren't using pagetitle block. // todo: check how to add pagetitle block as default?
+  $variables['title'] = [
+      '#markup' => $view->getTitle()
+  ];
+}
+
+/**
+ * Implements hook_preprocess_product().
+ */
+function infinite_preprocess_product(&$variables) {
+  $product = $variables['elements']['#product'];
+  $data_attributes = new Drupal\Core\Template\Attribute;
+  $data_attributes->setAttribute('data-title', $product->title->value)
+    ->setAttribute('data-shop', $product->shop->value)
+    ->setAttribute('data-brand', $product->brand->value)
+    ->setAttribute('data-price', $product->price->value)
+    ->setAttribute('data-currency', $product->currency->value)
+    ->setAttribute('data-sku', $product->sku->value);
+
+  if (Drupal::request()->attributes->has('node')) {
+    $node = Drupal::request()->attributes->get('node');
+    $sub_id = 'node-' . $node->id();
+  }
+  elseif (Drupal::request()->attributes->has('taxonomy_term')) {
+    $term = Drupal::request()->attributes->get('taxonomy_term');
+    $sub_id = 'term-' . $term->id();
+  }
+
+  $data_attributes->setAttribute('data-external-url', $product->detailpageurl->uri . '&subid=' . $sub_id);
+  $variables['data_attributes'] = $data_attributes;
+}

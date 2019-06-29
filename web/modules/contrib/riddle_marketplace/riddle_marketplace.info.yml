@@ -1,0 +1,14 @@
+name: Riddle Marketplace Module
+description: Creation and placing of riddles in Drupal8
+package: Riddle
+type: module
+# core: 8.x
+
+dependencies:
+  - drupal:ckeditor
+
+# Information added by Drupal.org packaging script on 2018-09-03
+version: '8.x-2.2'
+core: '8.x'
+project: 'riddle_marketplace'
+datestamp: 1535982785

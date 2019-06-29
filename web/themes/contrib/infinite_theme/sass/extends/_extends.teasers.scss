@@ -1,0 +1,27 @@
+%teaser-default {
+  @include teaser-default();
+}
+
+%teaser-landscape-medium {
+  @include teaser-landscape-medium();
+}
+
+%teaser-feed-large {
+  @include teaser-feed-large();
+}
+
+%teaser-feed-large-gap {
+  @include teaser-feed-large-gap();
+}
+
+%teaser-list-h {
+  @include teaser-list-h();
+}
+
+%teaser-full-content {
+  @include teaser-full-content();
+}
+
+%teaser-square-xs {
+  @include teaser-square-xs();
+}

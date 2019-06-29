@@ -1,0 +1,24 @@
+//todo check names
+%title--page-center {
+  @include title--page-center();
+}
+
+%title--horizontal-block {
+  @include title--horizontal-block();
+}
+
+%title--article {
+  @include title--article();
+}
+
+%title--text-block {
+  @include title--text-block();
+}
+
+%title--content-block {
+  @include title--content-block();
+}
+
+%title--caption-top-gap {
+  @include title--caption-top-gap();
+}

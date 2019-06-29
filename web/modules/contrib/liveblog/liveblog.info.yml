@@ -1,0 +1,27 @@
+name: Liveblog
+description: Liveblogging module for Drupal
+type: module
+# core: 8.x
+configure: liveblog.admin.settings
+dependencies:
+  - field
+  - hal
+  - language
+  - link
+  - menu_ui
+  - node
+  - options
+  - path
+  - rest
+  - serialization
+  - taxonomy
+  - text
+  - user
+  - simple_gmap
+  - views
+
+# Information added by Drupal.org packaging script on 2017-12-07
+version: '8.x-1.2-alpha14'
+core: '8.x'
+project: 'liveblog'
+datestamp: 1512663787

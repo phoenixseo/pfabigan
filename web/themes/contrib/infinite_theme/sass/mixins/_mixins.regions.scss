@@ -1,0 +1,21 @@
+@mixin region-fixed-content {
+  @include center-block();
+  max-width: $content-max-width;
+}
+
+@mixin region-full-content {
+  @include clear-gutter-gap();
+  @include padding-gutter-gap();
+}
+
+@mixin region-infinite-block() {
+  padding-bottom: $rib-gap-bottom-mobile;
+
+  @media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+    padding-bottom: $rib-gap-bottom-tablet;
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding-bottom: $rib-gap-bottom-desktop;
+  }
+}

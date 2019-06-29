@@ -1,0 +1,44 @@
+amp.metadata.*:
+  type: config_entity
+  label: 'AMP Metadata config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    globalToggle:
+      type: boolean
+      label: 'Global metadata'
+    nodeTypeId:
+      type: string
+      label: 'Content Type ID'
+    organizationName:
+      type: string
+      label: 'Organization name'
+      translatable: true
+    organizationLogoFid:
+      type: string
+      label: 'Organization logo FID'
+    organizationLogoImageStyleId:
+      type: string
+      label: 'Organization logo image style ID'
+    contentSchemaType:
+      type: string
+      label: 'Content schema type'
+    contentHeadlineToken:
+      type: string
+      label: 'Content headline token'
+    contentAuthorToken:
+      type: string
+      label: 'Content author token'
+    contentDescriptionToken:
+      type: string
+      label: 'Content description token'
+    contentImageToken:
+      type: string
+      label: 'Content image token'
+    contentImageStyleId:
+      type: string
+      label: 'Content image style ID'

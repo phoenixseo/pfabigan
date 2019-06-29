@@ -1,0 +1,446 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "bootstrap_customisations/variables";
+@import "../bower_components/Ionicons/scss/ionicons-variables";
+
+$content-max-width: 1128px !default;
+
+$fonts-path: '../fonts/' !default;
+$icons-font-path: '../fonts/icons/' !default;
+$icons-font-family: "icons" !default;
+
+$font-navigation: 'Verdana' !default;
+$font-label: 'Verdana' !default;
+$font-tiny: 'Verdana' !default;
+$font-headline: 'Arial' !default;
+$font-headline-bold: 'Arial' !default;
+$font-content: 'Arial' !default;
+$font-content-bold: 'Arial' !default;
+
+$label-letter-spacing: 1px !default;
+$headline-letter-spacing: 0px !default;
+$tiny-letter-spacing: 0px !default;
+$content-letter-spacing: 0px !default;
+
+$line-height-headline: 1.2 !default;
+$line-height-content: 1.55 !default;
+$line-height-text-tiny: 1.4 !default;
+
+$font-size-navigation: 15px !default;
+
+$font-size-base: 16px;
+$font-size-xl: 21px;
+$font-size-large: 18px;
+$font-size-medium: 16px;
+$font-size-small: 14px;
+$font-size-tiny: 12px;
+
+
+$headline-size-h1: 40px !default;
+$headline-size-h2: 36px !default;
+$headline-size-h3: 30px !default;
+$headline-size-h4: 24px !default;
+$headline-size-h5: 18px !default;
+$headline-size-h6: 15px !default;
+
+$tiny-size-xxl: 24px !default;
+$tiny-size-xl: 21px !default;
+$tiny-size-large: 18px !default;
+$tiny-size-medium: 16px !default;
+$tiny-size-small: 14px !default;
+$tiny-size-tiny: 12px !default;
+
+$icon-size-xxl: 35px !default;
+$icon-size-xl: 30px !default;
+$icon-size-large: 24px !default;
+$icon-size-medium: 17px !default;
+$icon-size-small: 15px !default;
+$icon-size-tiny: 13px !default;
+
+/** backgrounds **/
+$bg-color: #ffffff !default;
+$bg-color-gray-light: #f9f9f9 !default;
+
+/** colors **/
+$color-brand: #7d8482 !default;
+
+$white: #ffffff !default;
+$black: #000000 !default;
+$text-color: #383838 !default;
+$text-highlighted: $color-brand;
+$color-highlighted: #ea331e;
+$color-highlighted-hover: #000;
+$color-hover: $color-brand;
+
+$color-facebook: #325bb7 !default;
+$color-twitter: #589ded !default;
+$color-email: #50e3c2 !default;
+$color-pinterest: #cb061e !default;
+$color-instagram: #fbb4b4 !default;
+$color-whatsapp: #5cbe4a !default;
+
+$gray-darker: #383838;
+$gray-dark: lighten($gray-base, 20%);
+$gray-base: #7d8482;
+$gray: #e8e4e4;
+$gray-light: #e7e7e7;
+$gray-lighter: #eee;
+
+/** borders **/
+$h-line-style: 1px solid $gray !default;
+
+/** sizes **/
+//deprecated
+$gap-section: 31px !default;
+$padding: floor($grid-gutter-width / 2) !default;
+
+$feed-ad-column-width: 300px !default;
+$feed-ad-column-margin: 84px !default;
+$menu-sidebar-width: 275px !default;
+$spinner-size: 30px !default;
+$logo-sticky-width: 110px !default;
+$navigation-padding-top-bottom: 20px !default;
+$item-image-socials-width: 70px;
+
+$article-socials-column-width: 96px !default;
+$full-headlines-max-width: 840px !default;
+
+
+/** new variables **/
+$title-size-xxxs: 15px !default;
+$title-size-xxs: 18px !default;
+$title-size-xs: 20px !default;
+$title-size-sm: 24px !default;
+$title-size-md: 28px !default;
+$title-size-lg: 32px !default;
+$title-size-xl: 40px !default;
+$title-size-xxl: 48px !default;
+
+$gap-size-xxs: 8px !default;
+$gap-size-xs: 16px !default;
+$gap-size-sm: 24px !default;
+$gap-size-md: 28px !default;
+$gap-size-lg: 31px !default;
+$gap-size-xl: 36px !default;
+$gap-size-xxl: 48px !default;
+$gap-size-xxxl: 61px !default;
+
+
+/** Lists Gaps **/
+$gap-v-sm-mobile: $gap-size-xs !default;
+$gap-v-sm-tablet: $gap-size-sm !default;
+$gap-v-sm-desktop: $gap-size-sm !default;
+
+$gap-v-xl-mobile: $gap-size-md !default;
+$gap-v-xl-tablet: $gap-size-lg !default;
+$gap-v-xl-desktop: $gap-size-lg !default;
+
+/**region full content **/
+$region-v-lined: true !default;
+$gap-v-region-mobile: $gap-v-xl-mobile !default;
+$gap-v-region-tablet: $gap-v-xl-tablet !default;
+$gap-v-region-desktop: $gap-v-xl-desktop !default;
+
+$container-padding-top-mobile: $gap-size-md !default;
+$container-padding-top-tablet: $gap-size-lg !default;
+$container-padding-top-desktop: $gap-size-lg !default;
+
+/**
+** Main Navigation
+**/
+
+$menu--main-navigation-padding-mobile: 0 80px 0 80px !default;
+$menu--main-navigation-padding-tablet: 0 80px 0 80px !default;
+$menu--main-navigation-padding-desktop: 0 80px 0 80px !default;
+
+$navigation-fade-delay: 0.05s !default;
+$navigation-letter-spacing: 1px !default;
+$navigation-item-space: 28px !default;
+$navigation-item-space-lg: 1% !default;
+$navigation-min-height: 60px !default;
+$navigation-menu-icon-size: 17px !default;
+$navigation-search-icon-size: 19px !default;
+
+/**
+** Newsletter
+**/
+
+$newsletter--horizontal--padding-mobile: $gap-size-sm $gap-size-sm !default;
+$newsletter--horizontal--padding-tablet: $gap-size-sm $gap-size-sm !default;
+$newsletter--horizontal--padding-desktop: $gap-size-sm $gap-size-sm !default;
+
+$newsletter--horizontal--height-mobile: 367px !default;
+$newsletter--horizontal--height-tablet: 367px !default;
+$newsletter--horizontal--height-desktop: 367px !default;
+
+$newsletter__bg-image--horizontal-mobile: "../images/static/block-newsletter-sm_Tram.jpg" !default;
+$newsletter__bg-image--horizontal-tablet: "../images/static/block-newsletter-md_Tram.jpg" !default;
+$newsletter__bg-image--horizontal-desktop: "../images/static/block-newsletter-xl_Tram.jpg" !default;
+
+$newsletter__checkbox-label--horizontal-mobile: 11px !default;
+$newsletter__checkbox-label--horizontal-tablet: 11px !default;
+$newsletter__checkbox-label--horizontal-desktop: 11px !default;
+
+$newsletter__checkbox-label--horizontal-width-mobile: none !default;
+$newsletter__checkbox-label--horizontal-width-tablet: 440px !default;
+$newsletter__checkbox-label--horizontal-width-desktop: 440px !default;
+
+/**
+** Products
+**/
+
+$product__item-text-headline-height: 70px !default;
+$product__item-text-headline-size: 18px !default;
+
+
+$label-size-xxl: 24px !default;
+$label-size-xl: 21px !default;
+$label-size-large: 18px !default;
+$label-size-medium: 16px !default;
+$label-size-small: 13px !default;
+$label-size-tiny: 11px !default;
+
+/**
+** Labels
+**/
+
+/** label-category **/
+$label-category-size--default: $label-size-medium !default;
+
+/**
+** Titles
+**/
+
+/** title--page-center **/
+$title--page-center-mobile: 36px !default;
+$title--page-center-tablet: 59px !default;
+$title--page-center-desktop: 59px !default;
+$title--page-center-color: $gray-base;
+
+/** title--horizontal-block **/
+$title--horizontal-block-mobile: $title-size-xs !default;
+$title--horizontal-block-tablet: $title-size-sm !default;
+$title--horizontal-block-desktop: $title-size-md !default;
+
+$title--horizontal-block-gap-bottom-mobile: $gap-size-sm !default;
+$title--horizontal-block-gap-bottom-tablet: $gap-size-md !default;
+$title--horizontal-block-gap-bottom-desktop: $gap-size-xxl !default;
+
+/** title--content-block **/
+$title--content-block-mobile: $title-size-sm !default;
+$title--content-block-tablet: $title-size-md !default;
+$title--content-block-desktop: 30px !default; //fkn different design shizzl
+
+$title--content-block-gap-bottom-mobile: $gap-size-sm !default;
+$title--content-block-gap-bottom-tablet: $gap-size-md !default;
+$title--content-block-gap-bottom-desktop: $gap-size-xxl !default;
+
+/** title--article **/
+$title--article-mobile: $title-size-sm !default;
+$title--article-tablet: $title-size-md !default;
+$title--article-desktop: $title-size-xl !default;
+
+/** title--text-block **/
+$title--text-block-mobile: $title-size-sm !default;
+$title--text-block-tablet: $title-size-md !default;
+$title--text-block-desktop: 30px !default; //fkn different design shizzl
+
+/** copytext--text-block **/
+$copytext--text-block-mobile: 18px !default;
+$copytext--text-block-tablet: 19px !default;
+$copytext--text-block-desktop: 21px !default;
+
+/**
+** Teaser
+**/
+
+/** feed-teaser **/
+$feed-teaser-headline-size-mobile: $title-size-sm !default;
+$feed-teaser-headline-size-tablet: $title-size-md !default;
+$feed-teaser-headline-size-desktop: $title-size-lg !default;
+
+$feed-teaser-gap-top-mobile: $gap-size-md !default;
+$feed-teaser-gap-top-tablet: $gap-size-xl !default;
+$feed-teaser-gap-top-desktop: $gap-size-xl !default;
+
+/** full-content-teaser **/
+$fc-teaser-headline-size-mobile: $title-size-sm !default;
+$fc-teaser-headline-size-tablet: $title-size-lg !default;
+$fc-teaser-headline-size-desktop: $title-size-xxl !default;
+
+/** region infinite block **/
+$rib-gap-bottom-mobile: 0 !default;
+$rib-gap-bottom-tablet: 0 !default;
+$rib-gap-bottom-desktop: 0 !default;
+
+/** list horizontal teaser **/
+$teaser-list-h-headline-size-mobile: $title-size-xxxs !default;
+$teaser-list-h-headline-size-tablet: $title-size-xxs !default;
+$teaser-list-h-headline-size-desktop: $title-size-xxs !default;
+$teaser-list-h-teaser-gap-mobile: 6px !default;
+$teaser-list-h-teaser-gap-tablet: 28px !default;
+$teaser-list-h-teaser-gap-desktop: 35px !default;
+$teaser-list-h-teaser-shrinked-width: 61% !default;
+
+/** teaser square xs **/
+$teaser-square-xs-headline-size-mobile: $title-size-xxxs !default;
+$teaser-square-xs-headline-size-tablet: $title-size-sm !default;
+$teaser-square-xs-headline-size-desktop: $title-size-md !default;
+
+/**
+**  Lists **
+**/
+
+$list__glossary-font-size: $title-size-xxs !default;
+$list__glossary-line-height: 32px !default;
+$list__glossary-margin: 0 4px 4px 0 !default;
+$list__glossary-padding: 0 8px !default;
+$list__glossary-border: $h-line-style !default;
+$list__glossary-background-color: $bg-color-gray-light !default;
+$list__glossary-background-color-active: $color-highlighted !default;
+$list__glossary-background-disabled-color: $bg-color-gray-light !default;
+$list__glossary-disabled-color: $gray-base !default;
+$list__glossary-color-active: $white !default;
+
+/** list--alphabetical **/
+
+$list--alphabetical-headline-padding: 5px 0;
+$list--alphabetical-headline-margin: 0 0 $gap-size-xs 0;
+$list--alphabetical-headline-color: $color-brand;
+$list--alphabetical-list-item-margin: 10px 0 0 0;
+
+/**
+**  socials **
+**/
+
+$socials-size-sm: 32px !default;
+$socials-size-md: 40px !default;
+$socials-icon-size-sm: 16px !default;
+$socials-icon-size-md: 19px !default;
+$socials-default-border-radius: 50% !default;
+
+/** socials horizontal clean bar **/
+$socials-clean-horizontal-bar-left-gap: 8px !default;
+$socials-clean-horizontal-bar-size-mobile: $socials-size-sm !default;
+$socials-clean-horizontal-bar-size-tablet: $socials-size-sm !default;
+$socials-clean-horizontal-bar-size-desktop: $socials-size-sm !default;
+
+$socials-clean-horizontal-bar-icon-size-mobile: $socials-icon-size-sm !default;
+$socials-clean-horizontal-bar-icon-size-tablet: $socials-icon-size-sm !default;
+$socials-clean-horizontal-bar-icon-size-desktop: $socials-icon-size-sm !default;
+
+/** socials horizontal clean bar -- light **/
+$socials-clean-horizontal-bar--light-bg-color: $gray !default;
+$socials-clean-horizontal-bar--light-color: $text-color !default;
+$socials-clean-horizontal-bar--light-border: 1px solid $text-color !default;
+$socials-clean-horizontal-bar--light-bg-color-hover: transparent !default;
+$socials-clean-horizontal-bar--light-color-hover: $white !default;
+$socials-clean-horizontal-bar--light-border-color-hover: $white !default;
+
+/** socials horizontal bar **/
+$socials-labeled-horizontal-bar-label-size: 13px !default;
+
+$socials-labeled-horizontal-bar-left-gap-mobile: 8px !default;
+$socials-labeled-horizontal-bar-left-gap-tablet: 8px !default;
+$socials-labeled-horizontal-bar-left-gap-desktop: 8px !default;
+
+$socials-labeled-horizontal-bar-border-radius: floor($socials-size-md / 2) !default;
+$socials-labeled-horizontal-bar-size-mobile: $socials-size-md !default;
+$socials-labeled-horizontal-bar-size-tablet: $socials-size-md !default;
+$socials-labeled-horizontal-bar-size-desktop: $socials-size-md !default;
+
+$socials-labeled-horizontal-bar-icon-size-mobile: $socials-icon-size-md !default;
+$socials-labeled-horizontal-bar-icon-size-tablet: $socials-icon-size-md !default;
+$socials-labeled-horizontal-bar-icon-size-desktop: $socials-icon-size-md !default;
+
+/** socials vertical bar **/
+$socials-vertical-bar-left-gap-mobile: 8px !default;
+$socials-vertical-bar-top-gap-mobile: 8px !default;
+$socials-vertical-bar-top-gap-tablet: 8px !default;
+$socials-vertical-bar-top-gap-desktop: 8px !default;
+$socials-vertical-bar-size-mobile: $socials-size-md !default;
+$socials-vertical-bar-size-tablet: $socials-size-md !default;
+$socials-vertical-bar-size-desktop: $socials-size-md !default;
+
+$socials-vertical-bar-icon-size-mobile: $socials-icon-size-md !default;
+$socials-vertical-bar-icon-size-tablet: $socials-icon-size-md !default;
+$socials-vertical-bar-icon-size-desktop: $socials-icon-size-md !default;
+
+/** socials teaser horizontal bar **/
+$socials-teaser-horizontal-bar-left-gap: 8px !default;
+$socials-teaser-horizontal-bar-size-mobile: $socials-size-sm !default;
+$socials-teaser-horizontal-bar-size-tablet: $socials-size-sm !default;
+$socials-teaser-horizontal-bar-size-desktop: $socials-size-sm !default;
+
+$socials-teaser-horizontal-bar-icon-size-mobile: $socials-icon-size-sm !default;
+$socials-teaser-horizontal-bar-icon-size-tablet: $socials-icon-size-sm !default;
+$socials-teaser-horizontal-bar-icon-size-desktop: $socials-icon-size-sm !default;
+
+/** socials horizontal media bar **/
+$socials-media-left-gap: 8px !default;
+$socials-media-horizontal-bar-size-mobile: $socials-size-md !default;
+$socials-media-horizontal-bar-size-tablet: $socials-size-md !default;
+$socials-media-horizontal-bar-size-desktop: $socials-size-md !default;
+
+$socials-media-horizontal-bar-icon-size-mobile: $socials-icon-size-md !default;
+$socials-media-horizontal-bar-icon-size-tablet: $socials-icon-size-md !default;
+$socials-media-horizontal-bar-icon-size-desktop: $socials-icon-size-md !default;
+
+/**
+** Item Contents
+**/
+
+/** spotlight **/
+$spotlight__title-size-mobile: $title-size-lg !default;
+$spotlight__title-margin: 0 0 $gap-size-sm 0 !default;
+$spotlight__title-size-tablet: $title-size-xxl !default;
+$spotlight__title-size-desktop: 59px !default;
+
+$spotlight__subtitle-size: $label-size-medium !default;
+$spotlight__subtitle-margin: 0 0 $gap-size-sm 0 !default;
+
+$spotlight__copytext-size: 19px !default;
+$spotlight__copytext-margin: 0 0 $gap-size-lg 0 !default;
+
+$spotlight__caption-color: $white !default;
+$spotlight__caption-width: 522px !default;
+$spotlight__caption-padding: $gap-size-sm $gap-size-xxxl 115px $gap-size-sm !default;
+$spotlight__title-letter-spacing: -1.4px !default;
+$spotlight__caption-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !default;
+
+/** seo linker **/
+$seo-linker__item-title-size: $title-size-xxs !default;
+$seo-linker__link-list-size: 15px !default;
+
+/** animation **/
+$menu-home-animated-logo: true !default;
+$transition-duration: 0.35s !default;
+$transition-easing: ease !default;
+
+$opacity-disabled: 0.4 !default;
+$zindex-menu-sidebar: 100 !default;
+$zindex-modal-background: 10;
+$zindex-modal: 11;
+$teaser-list-horizontal-count-default: 4 !default;
+$teaser-hover-opacity: 0.85 !default;
+
+/** bootstrap overrides **/
+$grid-gutter-width: 24px;
+$state-danger-text: #ea331e;
+$alert-danger-border: #ea331e;
+$alert-danger-text: $state-danger-text;
+
+$modal-backdrop-bg: $white;
+$modal-backdrop-opacity: 0.85;
+
+$input-border-radius: 0;
+$input-border-radius-large: 0;
+$input-border-radius-small: 0;
+$input-height-large: 60px;
+
+$padding-large-vertical: 10px;
+
+$screen-lg: $content-max-width;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+
+$screen-md-max: ($screen-lg-min - 1);

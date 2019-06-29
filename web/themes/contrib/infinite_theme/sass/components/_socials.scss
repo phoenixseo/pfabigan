@@ -1,0 +1,74 @@
+.socials {
+  .item-social {
+    @extend %socials-default-item;
+  }
+
+  //fb / whatsapp / instagram / etc
+  @extend %socials-default-items;
+}
+
+.socials-bar-clean {
+  .item-social {
+    @extend %socials-clean-horizontal-bar-item;
+  }
+}
+
+.socials-bar {
+  @include socials-bar-container();
+}
+
+.teaser .socials-bar {
+  .item-social {
+    @extend %socials-teaser-horizontal-bar-item;
+  }
+}
+#header-home .socials-bar {
+  .item-social {
+    @extend %socials-teaser-horizontal-bar-item;
+  }
+}
+
+.item-media .socials-bar {
+  .item-social {
+    @extend %socials-media-horizontal-bar-item;
+  }
+}
+
+.socials-horizontal-bar {
+  @extend %socials-labeled-horizontal-bar-text;
+
+  .item-social {
+    @extend %socials-labeled-horizontal-bar-item;
+  }
+}
+
+.socials-vertical-bar {
+  .item-social {
+    @extend %socials-vertical-bar-item;
+  }
+}
+
+.item-instagram {
+  iframe {
+    @include center-block();
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+.item-pinterest {
+  text-align: center;
+}
+
+.item-twitter {
+  & > iframe {
+    @include center-block();
+    max-width: 500px !important;
+  }
+}
+
+.socials-bar {
+  .item-social.icon-whatsapp {
+    display: none;
+  }
+}

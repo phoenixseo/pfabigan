@@ -1,0 +1,27 @@
+{% extends "@infinite/node/node.html.twig" %}
+
+{% block content_header %}
+  {% block sponsored %}
+    {% include '@infinite/node/twig-block-sponsored.html.twig' %}
+  {% endblock %}
+
+  {% if has_header_block %}
+    <h2 class="text-headline text-headline-size-h1">{{ label }}</h2>
+  {% else %}
+    <h1 class="text-headline text-headline-size-h1">{{ label }}</h1>
+  {% endif %}
+  {{ author_teaser }}
+{% endblock %}
+
+{% block content_highlighted %}
+  {% if content.field_top_paragraphs|render %}
+    {{ content.field_top_paragraphs }}
+  {% endif %}
+{% endblock %}
+
+{% block content_body %}
+  {% if content.field_paragraphs['#items'] %}
+    {{ content.field_paragraphs }}
+    {{ content.field_tags }}
+  {% endif %}
+{% endblock %}

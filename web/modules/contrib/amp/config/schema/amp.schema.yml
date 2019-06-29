@@ -1,0 +1,16 @@
+field.formatter.settings.amp_image:
+  type: mapping
+  label: 'AMP image field formatter settings'
+  mapping:
+    image_style:
+      type: string
+      label: 'The image style to be used'
+    image_link:
+      type: string
+      label: 'To what the image should be linked'
+    amp_layout:
+      type: string
+      label: 'Which AMP layout to use'
+    amp_fixed_height:
+      type: integer
+      label: 'The fixed height, if `fixed-height` was used as layout'

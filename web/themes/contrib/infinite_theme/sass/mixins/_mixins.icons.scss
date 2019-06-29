@@ -1,0 +1,237 @@
+@mixin icon($container: '&:before') {
+  #{$container} {
+    @include user-select(none);
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: $icons-font-family !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@mixin icon-arrow-up-small($hover: true) {
+  &:before {
+    content: "\e90f";
+  }
+
+  @if ($hover) {
+    &:hover {
+      color: $color-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin icon-arrow-down-small($hover: true) {
+  &:before {
+    content: "\e910";
+  }
+
+  @if ($hover) {
+    &:hover {
+      color: $color-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin icon-arrow-left-small($hover: true) {
+  &:before {
+    content: "\e900";
+  }
+
+  @if ($hover) {
+    &:hover {
+      color: $color-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin icon-arrow-right-small($hover: true) {
+  &:before {
+    content: "\e901";
+  }
+
+  @if ($hover) {
+    &:hover {
+      color: $color-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin icon-menu($hover: true) {
+  &:before {
+    content: "\e908";
+  }
+
+  @if ($hover) {
+    &:hover {
+      color: $color-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin icon-close($hover: true) {
+  &:before {
+    content: "\e90b";
+  }
+
+  @if ($hover) {
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+    }
+  }
+}
+
+@mixin icon-search($hover: true) {
+  &:before {
+    content: "\e90a";
+  }
+
+  @if ($hover) {
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+    }
+  }
+}
+
+@mixin icon-info() {
+  &:before {
+    content: "\e90e";
+  }
+}
+
+@mixin icon-pinterest() {
+  &:before {
+    content: "\e904";
+  }
+}
+
+@mixin icon-twitter() {
+  &:before {
+    content: "\e905";
+  }
+}
+
+@mixin icon-email() {
+  &:before {
+    content: "\e906";
+  }
+}
+
+@mixin icon-facebook() {
+  &:before {
+    content: "\e907";
+  }
+}
+
+@mixin icon-instagram() {
+  &:before {
+    content: "\e915";
+  }
+}
+
+@mixin icon-whatsapp() {
+  &:before {
+    content: "\e909";
+  }
+}
+
+@mixin icon-arrow-large-left() {
+  &:before {
+    content: "\e902";
+  }
+}
+
+@mixin icon-arrow-large-left($hover: true) {
+  &:before {
+    content: "\e902";
+  }
+
+  @if ($hover) {
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+    }
+  }
+}
+
+@mixin icon-arrow-large-right($hover: true) {
+  &:before {
+    content: "\e903";
+  }
+
+  @if ($hover) {
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+    }
+  }
+}
+
+@mixin icon-circle-filled() {
+  &:before {
+    content: "\e914";
+  }
+}
+
+@mixin icon-circle-outlined() {
+  &:before {
+    content: "\e913";
+  }
+}
+
+@mixin icon-copyright() {
+  &:before {
+    content: "\00A9\00a0";
+  }
+}
+
+@mixin icon-return($size: '') {
+  &:before {
+    content: '\21A9';
+    vertical-align: middle;
+    display: inline-block;
+
+    @if ($size != '') {
+      font-size: $size;
+    }
+  }
+}
+
+@mixin icon-create($icon-variable, $size: '', $color: '', $hover-color: '', $container: '&:before') {
+
+  #{$container} {
+    @include icon();
+    content: $icon-variable;
+
+    @if ($color != '') {
+      color: $color;
+    }
+    @if ($size != '') {
+      font-size: $size;
+    }
+  }
+
+  @if ($hover-color != '') {
+    &:hover, &.active, &.swiper-active-switch {
+      #{$container} {
+        color: $hover-color;
+      }
+    }
+  }
+}

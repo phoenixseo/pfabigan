@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - nexx_integration
+id: nexx_video
+label: 'Nexx Video'
+description: ''
+type: nexx_video
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  channel_field: ''
+  actor_field: ''
+  teaser_image_field: field_preview_image
+field_map: {  }

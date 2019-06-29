@@ -1,0 +1,114 @@
+@mixin text-label($size: '', $color: '') {
+  font-family: $font-label;
+  letter-spacing: $label-letter-spacing;
+
+  @if ($size!= '') {
+    @include text-label-size($size);
+  }
+
+  @if ($color != '') {
+    color: $color;
+  }
+}
+
+@mixin text-label-size($size: $label-size-small) {
+  font-size: $size;
+}
+
+@mixin text-headline($size: '', $color: '', $letter-spacing: $headline-letter-spacing) {
+  font-family: $font-headline;
+  letter-spacing: $letter-spacing;
+
+  @if ($size!= '') {
+    @include text-headline-size($size);
+  }
+
+  @if ($color != '') {
+    color: $color;
+  }
+}
+
+@mixin text-headline-size($size, $line-height: $line-height-headline) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin text-tiny($size: '', $color: '') {
+  font-family: $font-tiny;
+  letter-spacing: $tiny-letter-spacing;
+
+  @if ($size != '') {
+    @include text-tiny-size($size);
+  }
+
+  @if ($color != '') {
+    color: $color;
+  }
+}
+
+@mixin text-tiny-size($size) {
+  font-size: $size;
+  line-height: $line-height-text-tiny;
+}
+
+@mixin text-content($size: '', $color: '') {
+  font-family: $font-content;
+  letter-spacing: $content-letter-spacing;
+
+  @if ($size != '') {
+    @include text-content-size($size);
+  }
+
+  @if ($color != '') {
+    color: $color;
+  }
+}
+
+@mixin text-content-size($size, $line-height: $line-height-content) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin text-content-html() {
+  & > p, & > .text-label {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    @extend %title--text-block;
+  }
+
+  p {
+    margin-top: $grid-gutter-width;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    margin-top: 5px;
+
+    li {
+      position: relative;
+      line-height: 1.5;
+      overflow: hidden;
+      padding-left: 22px;
+      margin-top: 10px;
+
+      &:before {
+        @extend %icon-arrow-right-small;
+        left: 0;
+        top: 7px;
+        position: absolute;
+        font-size: 17px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

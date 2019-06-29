@@ -1,0 +1,121 @@
+.region-full-content {
+  @extend %region-full-content;
+
+  &:first-child.region-marketing {
+
+    &.ad-active {
+      margin-top: -$gap-section;
+    }
+
+    &.ad-inactive + .region-full-content {
+      @extend %reset-container-v-gap;
+    }
+  }
+
+  & > .item-content__header:first-child {
+    padding-top: 0;
+  }
+}
+
+//padded / lined teaser
+.region-content, .region-feed-teasers {
+  & > .region-full-content:first-child {
+    @extend %container-v-padding;
+  }
+
+  .region-full-content + .region-full-content {
+    @extend %gap--v-region;
+    @if ($region-v-lined) {
+      border-top: $h-line-style;
+    }
+  }
+}
+
+#page-wrapper {
+  .region-presenter {
+    padding-top: 0;
+
+    .teaser-content-right {
+      padding-top: $gap-size-md;
+    }
+  }
+
+  .region-breadcrumb + .region-full-content {
+    margin-top: 0;
+    border-top: 0;
+  }
+}
+
+
+
+body .region-marketing.ad-active + .region-full-content {
+  @if ($region-v-lined) {
+    margin-top: -1px; //double line
+  }
+}
+
+.region-infinite-block {
+  @extend %region-infinite-block;
+}
+
+.no-horizontal-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//if ad is first child - remove negative margin-top
+//todo check this
+#content > .region-full-content:first-child > .region-marketing:first-child {
+  margin-top: 0;
+}
+
+.region-fixed-content, .container-fixed-content, .fixed-content {
+  @extend %region-fixed-content;
+}
+
+.region-teaser-full-content {
+  padding: 0;
+  border-top: 0;
+}
+
+.region__teasers--horizontal, .region__seo-linker--image {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.region-teaser-link-list {
+
+}
+
+#page-wrapper .container-row {
+  @extend %flexbox;
+  position: relative;
+
+  .container-row-body {
+    @extend %flex-item-1;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .container-row-sidebar {
+    display: none;
+    //height: auto !important;
+  }
+
+  @media (min-width: $screen-md-min) {
+    .container-row-sidebar {
+      display: block;
+      position: relative;
+      min-height: 1px;
+      float: left;
+      width: $feed-ad-column-width;
+      margin-left: $feed-ad-column-margin;
+    }
+  }
+}
+
+.region-no-gap + .region-full-content {
+  border-top: 0;
+  padding-top: 0;
+}

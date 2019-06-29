@@ -1,0 +1,9 @@
+amp.settings:
+  route_name: 'amp.settings'
+  base_route: 'amp.settings'
+  title: 'Configure'
+
+amp.metadata:
+  route_name: 'entity.amp_metadata.collection'
+  base_route: 'amp.settings'
+  title: 'Metadata'

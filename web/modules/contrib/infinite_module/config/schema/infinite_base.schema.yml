@@ -1,0 +1,22 @@
+infinite_base.filter_external_links:
+  type: config_object
+  label: 'Settings for external link filter'
+  mapping:
+    internal_domains:
+      type: sequence
+      label: 'Domains considered internal'
+      sequence:
+        type: string
+        label: 'Domain'
+
+action.configuration.node_reset_footer_blocks_action:
+  type: action_configuration_default
+  label: 'Reset footer blocks configuration'
+
+action.configuration.node_reset_header_blocks_action:
+  type: action_configuration_default
+  label: 'Reset header blocks configuration'
+
+action.configuration.node_reset_sidebar_blocks_action:
+  type: action_configuration_default
+  label: 'Reset sidebar blocks configuration'

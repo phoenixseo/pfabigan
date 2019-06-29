@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Thunder Cat theme.
+
+thunder_cat.settings:
+  type: theme_settings
+  label: 'Thunder Cat settings'
