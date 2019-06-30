@@ -1,26 +1,38 @@
 # GIT-IGNORE for Branch: Master
-#
+# Auskommentiert: nicht-ignorieren (also einchecken)
+
+# Dateien mit '._Name' oder '._.Name' ignorieren.
+# Werden von macOs angelegt und sind uninteressant.
+._*
 
 # .editorconfig
 
-# Ignore .env file with private information.
+# Die .env Datei enthält DB-Passworte und andere geheime Infos.
+# Soll ignoriert werden (nicht einchecken).
+# Die .env Datei muss am Zielort per FTP eingerichtet werden.
 .env
 
+# Die folgenden beiden Dateien sind bedenkenlos und können eingecheckt werden.
 # .env.example
 # .travis.yml
 
-# Ignore nasty NAS auto-generated stuff.
+# Von einem Dienst auf dem NAS autom. erzeugte Verzeichnisse, ignorieren.
 *@eaDir*
 
-# assets: backup, db-dump and stuff.
+# Ordner assets: Backups, DB-Dumps, Favicons, SSL-Zertifikat u.a.
 # assets
+#
+# Ordner assets/backup auf jeden Fall ignorieren.
+# Kann Website Backup enthalten (große Datenmenge).
+assets/backup/*
 
-# composer-stuff: wird absichtlich eingecheckt, damit die site via
+# Composer-Zeug: wird absichtlich eingecheckt, damit die Site via
 # "composer install" auf webserver nach vorgabe (composer.lock) gebaut wird.
 # composer.json
 # composer.lock
 
 # config: verzeichnis mit konfigurationen für module etc.
+# Falls hier YAML-Konfigurationen drin sind, mit einchecken.
 # config
 
 # drush: stuff für tool "drush", nicht zwingend erforderlich zu haben.
@@ -33,18 +45,22 @@ drush
 # private
 
 # README.md: liesmich-datei, die automatisch in github angezeigt wird.
+# Sollte immer mit eingecheckt werden (nicht ignorieren).
 # README.md
 
 # scripts: composer- und andere scripte
 # scripts
 
 # vendor: das verzeichnis mit allen durch composer geladenen abhängigen php-projekten
+# wird nicht benötigt, wenn website mit "composer install" wiederhergestellt werden kann.
 vendor
 
 # web: das verzeichnis, auf das der webserver zeigt.
+# dieses verzeichnis wird nicht ignnoriert, sondern eingecheckt.
 # web
 
 # spezielle unterverzeichnisse
+# diese können ignoriert werden (wenn "composer install" möglich).
 web/core
 web/libraries
 web/modules/contrib
@@ -57,9 +73,6 @@ web/themes/contrib
 
 # Ignore apple stuff
 .DS_Store
-
-# Ignore NAS stuff
-*@eaDir*
 
 # Ignore SimpleTest multi-site environment.
 web/sites/simpletest
