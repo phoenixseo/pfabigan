@@ -1,0 +1,12 @@
+<Files *.sql>
+  order allow,deny
+  deny from all
+</Files>
+<Files *.gz>
+  order allow,deny
+  deny from all
+</Files>
+<Files *.tgz>
+  order allow,deny
+  deny from all
+</Files>
