@@ -11,7 +11,7 @@
     "url": "git://github.com/BurdaMagazinOrg/infinite-theme.git"
   },
   "dependencies": {
-    "bower": "1.8.0",
+    "bower": "1.8.8",
     "browser-sync": "^2.18.5",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
