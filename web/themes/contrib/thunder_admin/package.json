@@ -37,7 +37,7 @@
     "css-sniper": "^0.5.0",
     "eslint": "^4.14.0",
     "imagemin-cli": "^3.0.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.2",
     "onchange": "^3.3.0",
     "postcss-cli": "^5.0.0",
